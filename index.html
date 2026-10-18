@@ -155,8 +155,64 @@ footer{padding:50px 18px 70px;text-align:center;color:#cfc6ff;font-size:14px;max
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
+<style>
+/* ===== COMIC INTRO ===== */
+#intro{display:none;position:fixed;inset:0;z-index:100;background:#0b0826;overflow:hidden;font-family:'Bangers',Impact,sans-serif;user-select:none}
+#intro.on{display:block}
+#iSvg{position:absolute;inset:0;width:100%;height:100%;display:block}
+#intro .halftone{position:absolute;inset:0;pointer-events:none;z-index:2;background:radial-gradient(rgba(0,0,0,.4) 1.4px,transparent 1.7px) 0 0/9px 9px;opacity:.45}
+#intro .vig{position:absolute;inset:0;pointer-events:none;z-index:3;background:radial-gradient(ellipse at center,transparent 52%,rgba(0,0,0,.75) 100%)}
+#iRays{position:absolute;inset:-35%;pointer-events:none;opacity:0;z-index:4;
+  background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.6) 0 2.2deg,transparent 2.2deg 8deg);
+  -webkit-mask-image:radial-gradient(circle,transparent 16%,#000 60%);mask-image:radial-gradient(circle,transparent 16%,#000 60%);
+  animation:raySpin 5s linear infinite}
+@keyframes raySpin{to{transform:rotate(360deg)}}
+#iSpeed{position:absolute;inset:0;pointer-events:none;opacity:0;z-index:4;overflow:hidden}
+#iSpeed .sl{position:absolute;right:-50vw;background:linear-gradient(90deg,transparent,#fff);animation:slMove .4s linear infinite}
+@keyframes slMove{from{transform:translateX(0)}to{transform:translateX(-170vw)}}
+#iFlash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:30}
+#iCap{position:absolute;left:3vmin;top:3vmin;z-index:12;background:#ffd23f;color:#111;border:.6vmin solid #111;box-shadow:.9vmin .9vmin 0 #111;
+  padding:.3vmin 2.2vmin;font-size:clamp(18px,4.4vmin,48px);letter-spacing:.08em;transform:rotate(-2deg);opacity:0}
+#iCap.pop{animation:capPop .35s cubic-bezier(.2,1.6,.4,1) forwards}
+@keyframes capPop{from{opacity:0;transform:rotate(-2deg) scale(.4) translateY(-20px)}to{opacity:1;transform:rotate(-2deg) scale(1)}}
+#iSfx{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%) rotate(-6deg);z-index:13;pointer-events:none;white-space:nowrap;opacity:0;
+  font-size:clamp(44px,17vmin,200px);color:#ffd23f;-webkit-text-stroke:1.5vmin #111;paint-order:stroke fill;text-shadow:1.1vmin 1.1vmin 0 #111}
+html.lock,html.lock body{overflow:hidden}
+#iBubble{position:absolute;left:50%;top:7%;z-index:15;transform:translateX(-50%) scale(0);opacity:0;transform-origin:50% 100%;max-width:88vw;
+  background:#fff6dc;color:#111;border:.7vmin solid #111;border-radius:3vmin;box-shadow:1vmin 1vmin 0 #111;padding:1.4vmin 3vmin 1.8vmin;text-align:center}
+#iBubble small{display:block;font-family:'Comic Neue',system-ui,sans-serif;font-weight:700;font-size:clamp(11px,2.2vmin,22px);color:#666}
+#iBubble b{display:block;font-weight:400;font-size:clamp(22px,6.2vmin,66px);letter-spacing:.04em;line-height:1.05}
+#iBubble::before{content:"";position:absolute;left:60%;bottom:-4.9vmin;border-left:2.3vmin solid transparent;border-right:2.3vmin solid transparent;border-top:5vmin solid #111;transform:skewX(-18deg)}
+#iBubble::after{content:"";position:absolute;left:calc(60% + .5vmin);bottom:-3.4vmin;border-left:1.5vmin solid transparent;border-right:1.5vmin solid transparent;border-top:3.8vmin solid #fff6dc;transform:skewX(-18deg)}
+#iSnd{display:none;position:absolute;left:2.5vmin;bottom:2.5vmin;z-index:40;pointer-events:none;color:#fff6dc;background:rgba(0,0,0,.5);padding:.5vmin 1.8vmin;border-radius:99px;
+  font-size:clamp(13px,2.6vmin,22px);letter-spacing:.1em;animation:pulse 1.2s infinite}
+#iTitle{position:absolute;inset:0;z-index:20;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;background:#2d1b69;overflow:hidden}
+#iTitle .iBg{position:absolute;inset:-70%;z-index:-1;background:repeating-conic-gradient(#2d1b69 0 7deg,#4a2fb0 7deg 14deg);animation:raySpin 14s linear infinite}
+#iTitle::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(0,0,0,.35) 1.4px,transparent 1.7px) 0 0/9px 9px;opacity:.5;pointer-events:none}
+#iTitle>*:not(.iBg){position:relative}
+#iTitle .iK{background:#fff6dc;color:#111;border:.6vmin solid #111;box-shadow:.8vmin .8vmin 0 #111;padding:.2vmin 2.4vmin;font-size:clamp(14px,3.4vmin,34px);letter-spacing:.12em;transform:rotate(-2deg)}
+#iTitle .iT{font-size:clamp(120px,40vmin,460px);line-height:.92;color:#9be564;-webkit-text-stroke:1.9vmin #111;paint-order:stroke fill;text-shadow:1.7vmin 1.7vmin 0 #111;transform:rotate(-4deg);margin:1vmin 0}
+#iTitle .iB{background:#ff4b4b;color:#fff;border:.8vmin solid #111;box-shadow:1.2vmin 1.2vmin 0 #111;padding:.4vmin 3vmin;font-size:clamp(18px,5.6vmin,60px);letter-spacing:.07em;transform:rotate(2deg);-webkit-text-stroke:.2vmin #111;paint-order:stroke fill}
+#iSkip{position:absolute;right:2.5vmin;bottom:2.5vmin;z-index:40;font-family:inherit;font-size:clamp(16px,3.2vmin,28px);letter-spacing:.1em;background:#fff6dc;color:#111;
+  border:.5vmin solid #111;box-shadow:.7vmin .7vmin 0 #111;padding:.3vmin 2.2vmin;cursor:pointer}
+#iSkip:hover{background:#9be564}
+#intro.out{animation:introOut .65s cubic-bezier(.6,0,.9,.4) forwards;pointer-events:none}
+@keyframes introOut{to{transform:scale(1.7);opacity:0}}
+</style>
 </head>
 <body>
+<div id="intro" class="on" aria-label="Intro animation">
+  <svg id="iSvg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet"></svg>
+  <div class="halftone"></div><div id="iRays"></div><div id="iSpeed"></div><div class="vig"></div>
+  <div id="iCap"></div><div id="iSfx"></div>
+  <div id="iBubble"><small>Replying to @definitely_an_expert</small><b>I FART IN YOUR GENERAL DIRECTION 💨</b></div>
+  <div id="iTitle"><div class="iBg"></div><div class="iK">★ MEME TOKEN · 100% GASEOUS ★</div><div class="iT" id="iT">FTR</div><div class="iB" id="iB">FARTING TESLA ROADSTER</div></div>
+  <div id="iFlash"></div>
+  <div id="iSnd">🔊 TAP FOR SOUND</div>
+  <button id="iSkip" type="button">SKIP ▶</button>
+</div>
+<script>document.documentElement.classList.add('lock');setTimeout(function(){var i=document.getElementById('intro');if(i){i.remove();document.documentElement.classList.remove('lock')}},16000);</script>
+
 
 <div class="ticker"><div id="tk"></div></div>
 
@@ -485,7 +541,8 @@ function burst(x,y,n=34,colorful=false){
     }
     d.style.left=x+'px'; d.style.top=y+'px';
     const a=Math.random()*Math.PI*2, r=80+Math.random()*260, s=.7+Math.random()*2.2;
-    document.body.appendChild(d);
+    const introEl=document.getElementById('intro');
+    (introEl&&introEl.isConnected?introEl:document.body).appendChild(d);
     d.animate([
       {transform:'translate(-50%,-50%) scale(.3)',opacity:1},
       {transform:`translate(${Math.cos(a)*r-10}px,${Math.sin(a)*r-10}px) scale(${s})`,opacity:0}
@@ -563,6 +620,267 @@ function press(){
 }
 document.getElementById('fartBtn').addEventListener('click',press);
 document.querySelector('.scene').addEventListener('click',press);
+
+/* ================= COMIC INTRO ================= */
+(function(){
+  const intro=document.getElementById('intro'); if(!intro) return;
+  const root=document.documentElement;
+  const bail=()=>{ intro.remove(); root.classList.remove('lock'); };
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches || /[?#&]nointro/.test(location.href)){ bail(); return; }
+  try{
+  const NS='http://www.w3.org/2000/svg', $=id=>document.getElementById(id), svg=$('iSvg');
+  const rnd=(a,b)=>a+Math.random()*(b-a);
+  const timers=[]; let done=false;
+  const at=(ms,fn)=>timers.push(setTimeout(()=>{ if(!done){ try{fn();}catch(e){console.error(e);} } },ms));
+
+  /* ---------- audio (synth only; browsers may block until first tap) ---------- */
+  try{ ac = ac || new (window.AudioContext||window.webkitAudioContext)(); if(ac.resume) ac.resume().catch(()=>{}); }catch(e){}
+  const audioOK=()=>!!ac && ac.state==='running';
+  const snd=$('iSnd');
+  if(!audioOK()) snd.style.display='block';
+  const unlock=()=>{ try{ ac && ac.resume && ac.resume().then(()=>{ if(ac.state==='running') snd.style.display='none'; }); }catch(e){} };
+  ['pointerdown','keydown','touchstart'].forEach(ev=>intro.addEventListener(ev,unlock,{passive:true}));
+  const noiseBuf=s=>{ const n=Math.floor(ac.sampleRate*s), b=ac.createBuffer(1,n,ac.sampleRate), d=b.getChannelData(0); for(let i=0;i<n;i++) d[i]=Math.random()*2-1; return b; };
+  function whoosh(dur=.6,f0=250,f1=3200,vol=.35){
+    if(!audioOK()) return; const t=ac.currentTime, s=ac.createBufferSource(), f=ac.createBiquadFilter(), g=ac.createGain();
+    s.buffer=noiseBuf(dur); f.type='bandpass'; f.Q.value=1.4; f.frequency.setValueAtTime(f0,t); f.frequency.exponentialRampToValueAtTime(f1,t+dur);
+    g.gain.setValueAtTime(.001,t); g.gain.linearRampToValueAtTime(vol,t+dur*.4); g.gain.exponentialRampToValueAtTime(.001,t+dur);
+    s.connect(f); f.connect(g); g.connect(ac.destination); s.start(t);
+  }
+  function boom(){
+    if(!audioOK()) return; const t=ac.currentTime, o=ac.createOscillator(), g=ac.createGain();
+    o.type='sine'; o.frequency.setValueAtTime(150,t); o.frequency.exponentialRampToValueAtTime(30,t+.7);
+    g.gain.setValueAtTime(.9,t); g.gain.exponentialRampToValueAtTime(.001,t+.8); o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t+.85);
+    whoosh(.5,3000,200,.4);
+  }
+  function blip(f=660){
+    if(!audioOK()) return; const t=ac.currentTime, o=ac.createOscillator(), g=ac.createGain();
+    o.type='square'; o.frequency.setValueAtTime(f,t); o.frequency.exponentialRampToValueAtTime(f*1.6,t+.08);
+    g.gain.setValueAtTime(.1,t); g.gain.exponentialRampToValueAtTime(.001,t+.12); o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t+.14);
+  }
+  const fart=()=>{ if(audioOK()) fartSound(); };
+
+  /* ---------- world (SVG) ---------- */
+  const VH=900; let VW=1600;
+  const fitView=()=>{ VW=Math.round(VH*innerWidth/innerHeight); svg.setAttribute('viewBox','0 0 '+VW+' '+VH); };
+  fitView(); addEventListener('resize',fitView);
+
+  let stars=''; for(let i=0;i<150;i++) stars+=`<circle cx="${rnd(-700,2300).toFixed(0)}" cy="${rnd(-500,700).toFixed(0)}" r="${rnd(1.5,4.2).toFixed(1)}" fill="${Math.random()<.2?'#ffd23f':'#fff'}" opacity="${rnd(.5,1).toFixed(2)}"/>`;
+  let city='', bx=-700;
+  while(bx<2400){ const w=rnd(70,150), h=rnd(120,300), y=866-h;
+    city+=`<rect x="${bx.toFixed(0)}" y="${y.toFixed(0)}" width="${w.toFixed(0)}" height="${h.toFixed(0)}" fill="#1b0f52" stroke="#111" stroke-width="5"/>`;
+    for(let wy=y+18; wy<830; wy+=34) for(let wx=bx+14; wx<bx+w-18; wx+=26) if(Math.random()<.3) city+=`<rect x="${wx.toFixed(0)}" y="${wy.toFixed(0)}" width="12" height="16" fill="#ffd23f" opacity=".85"/>`;
+    bx+=w+rnd(-6,12); }
+  const spikes=(n,R,r)=>{ const p=[]; for(let i=0;i<n*2;i++){ const a=i*Math.PI/n, rad=i%2?r:R*(.85+Math.random()*.3); p.push((Math.cos(a)*rad).toFixed(1)+','+(Math.sin(a)*rad).toFixed(1)); } return p.join(' '); };
+  const bigSpikes=spikes(16,340,200);
+  const burstShape=`<polygon points="${bigSpikes}" fill="#111" transform="translate(16 16)"/>
+    <polygon points="${bigSpikes}" fill="#ffd23f" stroke="#111" stroke-width="10" stroke-linejoin="round"/>
+    <polygon points="${spikes(14,240,140)}" fill="#ff4b4b" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+    <polygon points="${spikes(12,130,80)}" fill="#fff6dc" stroke="#111" stroke-width="6" stroke-linejoin="round"/>`;
+  const F='font-family="Comic Neue, sans-serif" font-weight="700"';
+  svg.innerHTML=`
+  <defs>
+    <linearGradient id="iSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070520"/><stop offset=".62" stop-color="#1c1058"/><stop offset=".85" stop-color="#5a2aa0"/><stop offset=".97" stop-color="#ff7ab8"/></linearGradient>
+    <clipPath id="iHead"><circle cx="176" cy="360" r="36"/></clipPath>
+  </defs>
+  <g id="iWorld" style="transform-origin:0 0">
+    <rect x="-3000" y="-1500" width="7600" height="2400" fill="url(#iSky)"/>
+    ${stars}
+    <circle cx="1200" cy="180" r="120" fill="#fff6dc" stroke="#111" stroke-width="7"/><circle cx="1160" cy="150" r="22" fill="#e9dfbd"/><circle cx="1240" cy="215" r="30" fill="#e9dfbd"/><circle cx="1250" cy="130" r="13" fill="#e9dfbd"/>
+    ${city}
+    <rect x="-3000" y="866" width="7600" height="900" fill="#24156a" stroke="#111" stroke-width="8"/>
+    <path d="M-3000 990 H4600" stroke="#ffd23f" stroke-width="10" stroke-dasharray="60 50" opacity=".5"/>
+    <g id="iBurst" transform="translate(500 548)" style="opacity:0"><g id="iBurstIn" style="transform-box:fill-box;transform-origin:center">${burstShape}</g></g>
+    <g id="iCritFly" style="transform-box:fill-box;transform-origin:center"><g id="iCritPos" transform="translate(15.2 -268) scale(2.3)"></g></g>
+    <g id="iDots" stroke="#111" stroke-width="5" fill="#fff">
+      <circle cx="262" cy="470" r="9" style="transform-box:fill-box;transform-origin:center;opacity:0"/>
+      <circle cx="250" cy="428" r="13" style="transform-box:fill-box;transform-origin:center;opacity:0"/>
+      <circle cx="232" cy="380" r="18" style="transform-box:fill-box;transform-origin:center;opacity:0"/>
+    </g>
+    <g id="iPost" style="transform-box:fill-box;transform-origin:center;opacity:0"><g transform="translate(170 110)">
+      <rect x="12" y="12" width="540" height="190" rx="18" fill="#111"/>
+      <rect width="540" height="190" rx="18" fill="#fff" stroke="#111" stroke-width="6"/>
+      <circle cx="58" cy="56" r="30" fill="#ff6b6b" stroke="#111" stroke-width="5"/><text x="58" y="67" text-anchor="middle" font-size="30">🤡</text>
+      <text x="104" y="48" ${F} font-size="26" fill="#111" textLength="270" lengthAdjust="spacingAndGlyphs">HaterOfAllThings</text>
+      <text x="104" y="78" ${F} font-size="20" fill="#667" textLength="300" lengthAdjust="spacingAndGlyphs">@definitely_an_expert · now</text>
+      <text x="506" y="50" text-anchor="end" font-family="Bangers, Impact" font-size="40" fill="#111">X</text>
+      <text x="30" y="132" ${F} font-size="32" fill="#111" textLength="330" lengthAdjust="spacingAndGlyphs">it's literally just an</text>
+      <text x="30" y="172" ${F} font-size="34" fill="#ff4b4b" textLength="400" lengthAdjust="spacingAndGlyphs">EMPTY FLYING SHELL</text><text x="448" y="172" font-size="32">🤡</text>
+    </g></g>
+    <g id="iCarFly" style="transform-box:fill-box;transform-origin:center;opacity:0"><g id="iCarPos" transform="translate(270 -42) scale(1.5)"></g></g>
+    <g id="iGas"></g>
+  </g>`;
+  const world=$('iWorld');
+
+  // reuse the page's own cartoon art (same original characters)
+  const crit=document.querySelector('.critic').cloneNode(true);
+  const car=document.querySelector('.car').cloneNode(true);
+  [crit,car].forEach(n=>n.querySelectorAll('[filter]').forEach(e=>e.removeAttribute('filter')));
+  const fc=crit.querySelector('.faceCloud'); fc.removeAttribute('id'); fc.style.opacity=0;
+  car.classList.remove('car');
+  for(let i=0;i<3;i++) car.removeChild(car.firstElementChild);          // drop the small speech bubble (we use a big HTML one)
+  // smug "before" face (hidden on impact, revealing the dizzy gagging face)
+  const smug=document.createElementNS(NS,'g'); smug.setAttribute('clip-path','url(#iHead)');
+  smug.innerHTML=`<rect x="135" y="347" width="95" height="60" fill="#f2c29b"/>
+    <g stroke="#111" stroke-width="3" stroke-linecap="round" fill="none">
+      <ellipse cx="162" cy="357" rx="10" ry="7" fill="#fff"/><ellipse cx="194" cy="357" rx="10" ry="7" fill="#fff"/>
+      <circle cx="159" cy="359" r="3.4" fill="#111"/><circle cx="191" cy="359" r="3.4" fill="#111"/>
+      <path d="M150 353 H174 M182 353 H206" stroke-width="5"/>
+      <path d="M158 384 Q180 398 202 376" stroke-width="4"/><path d="M202 376 q5 -2 7 -8" stroke-width="3"/>
+    </g>`;
+  crit.insertBefore(smug,crit.querySelector('.stink'));
+  $('iCritPos').appendChild(crit); $('iCarPos').appendChild(car);
+  const critFly=$('iCritFly'), carFly=$('iCarFly'), post=$('iPost'), dots=$('iDots');
+
+  // speed lines
+  const speed=$('iSpeed');
+  for(let i=0;i<30;i++){ const d=document.createElement('div'); d.className='sl';
+    d.style.cssText=`top:${rnd(0,100).toFixed(1)}%;height:${rnd(1.5,5).toFixed(1)}px;width:${rnd(25,60).toFixed(0)}vw;animation-duration:${rnd(.22,.45).toFixed(2)}s;animation-delay:-${rnd(0,.5).toFixed(2)}s;opacity:${rnd(.4,1).toFixed(2)}`;
+    speed.appendChild(d); }
+
+  /* ---------- camera + effects ---------- */
+  let cam={cx:620,cy:470,W:1700};
+  const camM=c=>{ const z=Math.max(VW/c.W,.5); return `matrix(${z},0,0,${z},${VW/2-c.cx*z},${VH/2-c.cy*z})`; };
+  world.style.transform=camM(cam);
+  function camTo(c,dur,ease='cubic-bezier(.5,0,.2,1)'){
+    let from=camM(cam); try{ const t=getComputedStyle(world).transform; if(t&&t!=='none') from=t; }catch(e){}
+    const to=camM(c); cam=c; world.style.transform=to;
+    world.animate([{transform:from},{transform:to}],{duration:dur,easing:ease});
+  }
+  function shake(amp=14,dur=400){
+    const kf=[], n=12;
+    for(let i=0;i<=n;i++){ const k=1-i/n; kf.push({transform:`translate(${(Math.random()*2-1)*amp*k}px,${(Math.random()*2-1)*amp*k}px) rotate(${(Math.random()*2-1)*amp*k*.05}deg)`}); }
+    svg.animate(kf,{duration:dur,easing:'linear'});
+  }
+  const flash=(a=.9,ms=300)=>$('iFlash').animate([{opacity:a},{opacity:0}],{duration:ms,easing:'ease-out'});
+  const rays=(ms=800,a=.55)=>$('iRays').animate([{opacity:0},{opacity:a,offset:.2},{opacity:a*.7,offset:.7},{opacity:0}],{duration:ms,fill:'both'});
+  function cap(t){ const c=$('iCap'); c.textContent=t; c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); }
+  function sfx(t,{color='#ffd23f',size=1,rot=-6,ms=700,top=44}={}){
+    const s=$('iSfx'); s.textContent=t; s.style.color=color; s.style.top=top+'%';
+    s.style.fontSize=`clamp(${(44*size).toFixed(0)}px,${(17*size).toFixed(1)}vmin,${(200*size).toFixed(0)}px)`;
+    const tr=(r,sc)=>`translate(-50%,-50%) rotate(${r}deg) scale(${sc})`;
+    s.animate([{opacity:0,transform:tr(rot,.2)},{opacity:1,transform:tr(rot,1.35),offset:.22},{opacity:1,transform:tr(rot-2,1),offset:.55},{opacity:1,transform:tr(rot+2,1.07),offset:.85},{opacity:0,transform:tr(rot,1.5)}],{duration:ms,easing:'ease-out',fill:'both'});
+  }
+  const bubble=$('iBubble');
+  const bubbleShow=()=>bubble.animate([{opacity:0,transform:'translateX(-50%) scale(0) rotate(-6deg)'},{opacity:1,transform:'translateX(-50%) scale(1.12) rotate(1deg)',offset:.65},{opacity:1,transform:'translateX(-50%) scale(1) rotate(0)'}],{duration:380,easing:'ease-out',fill:'forwards'});
+  const bubbleHide=()=>bubble.animate([{opacity:1,transform:'translateX(-50%) scale(1)'},{opacity:0,transform:'translateX(-50%) scale(.2)'}],{duration:160,fill:'forwards'});
+
+  /* ---------- gas volley (colored puffs + yellow stars + jet streak) ---------- */
+  function volley(){
+    const g=$('iGas'), S={x:900,y:330}, E={x:535,y:548}, flight=620;
+    const mk=(tag,attrs)=>{ const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); g.appendChild(e); return e; };
+    const d=`M${S.x} ${S.y} C 800 300, 650 380, ${E.x} ${E.y}`;
+    [['#111',78],['#9be564',58],['#e4ffc9',20]].forEach(([c,w])=>{
+      const p=mk('path',{d,fill:'none',stroke:c,'stroke-width':w,'stroke-linecap':'round',pathLength:1,'stroke-dasharray':'1 1'});
+      p.animate([{strokeDashoffset:1,opacity:1},{strokeDashoffset:0,opacity:1,offset:.55},{strokeDashoffset:0,opacity:0}],{duration:flight+320,easing:'cubic-bezier(.3,.7,.3,1)',fill:'both'}).onfinish=()=>p.remove();
+    });
+    for(let i=0;i<7;i++){            // muzzle blast at the exhaust
+      const c=mk('circle',{cx:S.x+rnd(-30,10),cy:S.y+rnd(-30,30),r:rnd(26,52),fill:pick(PALETTE),stroke:'#111','stroke-width':6});
+      c.style.transformBox='fill-box'; c.style.transformOrigin='center';
+      c.animate([{transform:'scale(.2)',opacity:1},{transform:'scale(2.4)',opacity:0}],{duration:520,delay:i*30,easing:'ease-out',fill:'both'}).onfinish=()=>c.remove();
+    }
+    for(let i=0;i<32;i++){
+      const r0=rnd(20,36), c=mk('circle',{cx:S.x,cy:S.y,r:r0,fill:pick(PALETTE),stroke:'#111','stroke-width':6});
+      c.style.opacity=0; c.style.transformBox='fill-box'; c.style.transformOrigin='center';
+      const dx=E.x-S.x+rnd(-60,60), dy=E.y-S.y+rnd(-50,50), lift=-rnd(60,140), s1=rnd(1.4,2.4);
+      c.animate([
+        {transform:'translate(0,0) scale(.4)',opacity:0,offset:0},
+        {transform:`translate(${dx*.35}px,${dy*.35+lift}px) scale(${s1*.6})`,opacity:1,offset:.35},
+        {transform:`translate(${dx}px,${dy}px) scale(${s1})`,opacity:1,offset:.85},
+        {transform:`translate(${dx}px,${dy}px) scale(${s1*1.2})`,opacity:0,offset:1}
+      ],{duration:flight,delay:i*24,easing:'cubic-bezier(.3,.6,.4,1)',fill:'both'}).onfinish=()=>c.remove();
+    }
+    for(let i=0;i<22;i++){
+      const R=rnd(26,52), st=mk('polygon',{points:starPoints(S.x,S.y,R,R*.42),fill:'#ffd23f',stroke:'#111','stroke-width':5,'stroke-linejoin':'round'});
+      st.style.opacity=0; st.style.transformBox='fill-box'; st.style.transformOrigin='center';
+      const dx=E.x-S.x+rnd(-110,110), dy=E.y-S.y+rnd(-90,90), lift=-rnd(80,180), spin=(Math.random()<.5?-1:1)*rnd(240,540);
+      st.animate([
+        {transform:'translate(0,0) scale(.3) rotate(0deg)',opacity:0,offset:0},
+        {transform:`translate(${dx*.4}px,${dy*.4+lift}px) scale(1.1) rotate(${spin*.45}deg)`,opacity:1,offset:.4},
+        {transform:`translate(${dx}px,${dy}px) scale(1.3) rotate(${spin}deg)`,opacity:1,offset:.88},
+        {transform:`translate(${dx}px,${dy+30}px) scale(.2) rotate(${spin*1.1}deg)`,opacity:0,offset:1}
+      ],{duration:flight+150,delay:i*30,easing:'cubic-bezier(.3,.6,.4,1)',fill:'both'}).onfinish=()=>st.remove();
+    }
+  }
+
+  /* ---------- impact + title ---------- */
+  function impact(){
+    flash(.95,360); shake(40,650); smug.style.display='none';
+    camTo({cx:490,cy:545,W:720},180,'cubic-bezier(.2,.9,.2,1)');
+    $('iBurst').style.opacity=1;
+    $('iBurstIn').animate([{transform:'scale(.1) rotate(-20deg)'},{transform:'scale(1.15) rotate(4deg)',offset:.5},{transform:'scale(1) rotate(0)'}],{duration:450,easing:'cubic-bezier(.2,1.4,.4,1)',fill:'both'});
+    fc.style.opacity=1;
+    fc.animate([{transform:'scale(.2)'},{transform:'scale(1.9)',offset:.6},{transform:'scale(1.5)'}],{duration:520,easing:'ease-out',fill:'forwards'});
+    fc.querySelectorAll('circle').forEach(c=>{ const f0=c.getAttribute('fill'); c.animate({fill:[f0,pick(PALETTE),pick(PALETTE),f0]},{duration:1000}); });
+    critFly.animate([
+      {transform:'translate(0,0) rotate(0deg)'},
+      {transform:'translate(40px,-20px) rotate(6deg)',offset:.12},
+      {transform:'translate(-1300px,-380px) rotate(-75deg)'}
+    ],{duration:1000,delay:260,easing:'cubic-bezier(.45,0,.9,.55)',fill:'forwards'});
+    sfx('PFFFFT!!!',{color:'#9be564',size:1.25,rot:-7,ms:700,top:26});
+    cap('DIRECT HIT!'); rays(800); boom(); fart();
+    burst(innerWidth/2,innerHeight/2,44,true);
+  }
+  function title(){
+    flash(1,420); shake(30,520); boom();
+    $('iT').textContent=CONFIG.name; $('iB').textContent=CONFIG.full;
+    $('iTitle').style.display='flex';
+    $('iT').animate([{transform:'rotate(-4deg) scale(5)',opacity:0},{transform:'rotate(-4deg) scale(.9)',opacity:1,offset:.55},{transform:'rotate(-5deg) scale(1.08)',offset:.78},{transform:'rotate(-4deg) scale(1)',opacity:1}],{duration:640,easing:'cubic-bezier(.3,.7,.3,1)',fill:'both'});
+    $('iTitle').querySelector('.iK').animate([{transform:'translateX(-120vw) rotate(-2deg)'},{transform:'translateX(0) rotate(-2deg)'}],{duration:420,delay:220,easing:'cubic-bezier(.2,1.2,.4,1)',fill:'both'});
+    $('iB').animate([{transform:'translateX(120vw) rotate(2deg)'},{transform:'translateX(0) rotate(2deg)'}],{duration:420,delay:380,easing:'cubic-bezier(.2,1.2,.4,1)',fill:'both'});
+    $('iT').animate([{transform:'rotate(-4deg) scale(1)'},{transform:'rotate(-3deg) scale(1.04)'},{transform:'rotate(-4deg) scale(1)'}],{duration:900,delay:700,iterations:Infinity,easing:'ease-in-out'});
+    burst(innerWidth/2,innerHeight*.45,50,true);
+    at(330,()=>burst(innerWidth*.25,innerHeight*.6,26,true));
+    at(520,()=>burst(innerWidth*.75,innerHeight*.6,26,true));
+  }
+  function finish(){
+    if(done) return; done=true; timers.forEach(clearTimeout);
+    intro.classList.add('out');
+    setTimeout(()=>{ intro.remove(); root.classList.remove('lock'); window.scrollTo(0,0); },680);
+  }
+  $('iSkip').addEventListener('click',e=>{ e.stopPropagation(); finish(); });
+  addEventListener('keydown',e=>{ if(e.key==='Escape') finish(); });
+  $('iSkip').focus({preventScroll:true});
+
+  /* ---------- TIMELINE ---------- */
+  svg.animate([{opacity:0},{opacity:1}],{duration:300});
+  camTo({cx:420,cy:395,W:1100},1500,'cubic-bezier(.25,.1,.25,1)');
+  at(120,()=>cap('MEANWHILE, ON X…'));
+  [560,680,800].forEach((t,i)=>at(t,()=>{ blip(420+i*90); dots.children[i].animate([{transform:'scale(0)',opacity:0},{transform:'scale(1.35)',opacity:1,offset:.6},{transform:'scale(1)',opacity:1}],{duration:260,fill:'both'}); }));
+  at(950,()=>{ blip(880); post.animate([{transform:'scale(.1) rotate(-14deg)',opacity:0},{transform:'scale(1.12) rotate(2deg)',opacity:1,offset:.6},{transform:'scale(1) rotate(0)',opacity:1}],{duration:450,easing:'ease-out',fill:'both'}); });
+
+  at(1450,()=>{
+    cap('THEN… A REPLY.'); whoosh(.7,200,3500,.4);
+    $('iSpeed').animate([{opacity:0},{opacity:1,offset:.15},{opacity:1,offset:.8},{opacity:0}],{duration:900,fill:'both'});
+    sfx('VRRROOOM!',{color:'#5ec8ff',size:.9,rot:4,ms:850,top:60});
+    post.animate([{transform:'none',opacity:1},{transform:'translate(-900px,-500px) rotate(-90deg) scale(.4)',opacity:0}],{duration:600,easing:'cubic-bezier(.6,0,1,.6)',fill:'forwards'});
+    dots.animate([{opacity:1},{opacity:0}],{duration:200,fill:'forwards'});
+    camTo({cx:1000,cy:330,W:1500},450,'cubic-bezier(.7,0,.2,1)');
+  });
+  at(1600,()=>{
+    carFly.animate([
+      {opacity:1,transform:'translate(1100px,-700px) rotate(-22deg) scale(3.2)',offset:0},
+      {opacity:1,transform:'translate(-60px,30px) rotate(3deg) scale(.96)',offset:.72},
+      {opacity:1,transform:'translate(0,0) rotate(0deg) scale(1)',offset:1}
+    ],{duration:650,easing:'cubic-bezier(.15,.8,.25,1)',fill:'both'});
+    carFly.animate([{transform:'translate(0,0)'},{transform:'translate(8px,-14px) rotate(-1deg)'},{transform:'translate(0,0)'}],{duration:1700,delay:650,iterations:Infinity,easing:'ease-in-out'});
+  });
+  at(2250,()=>{ flash(.55,200); shake(18,450); boom(); });
+  at(2300,()=>{ cap('HE HAS A REPLY…'); camTo({cx:1340,cy:190,W:640},520,'cubic-bezier(.5,0,.1,1)'); });
+  at(2520,()=>{ bubbleShow(); blip(520); });
+  at(3000,()=>{ bubbleHide(); camTo({cx:850,cy:420,W:1500},280,'cubic-bezier(.6,0,.3,1)'); });
+  at(3250,()=>{
+    cap('INCOMING!'); fart(); whoosh(.8,2500,250,.45); shake(12,320);
+    sfx('PRRRRT!',{color:'#9be564',size:.95,rot:-5,ms:650,top:30});
+    carFly.animate([{transform:'translate(0,0)'},{transform:'translate(34px,-12px) rotate(2deg)'},{transform:'translate(0,0)'}],{duration:420,easing:'ease-out'});
+    volley();
+    camTo({cx:690,cy:470,W:1150},760,'ease-in-out');
+  });
+  at(3970,impact);
+  at(4700,title);
+  at(6700,finish);
+  }catch(err){ console.error('intro failed',err); bail(); }
+})();
 </script>
 </body>
 </html>
