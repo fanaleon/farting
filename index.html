@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>$FTR — Farting Tesla Roadster</title>
+<meta name="description" content="$FTR: the meme token born from the most aerodynamic reply in internet history. Parody. Not financial advice.">
+
+<!-- Link preview (X, Telegram, WhatsApp, Discord). If you use a custom domain, replace
+     https://fanaleon.github.io/ftr  with  https://yourdomain.com  in the 3 lines marked (domain) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="$FTR — Farting Tesla Roadster">
+<meta property="og:description" content="The meme token born from the most aerodynamic reply in internet history. Parody. Not financial advice.">
+<meta property="og:url" content="https://fanaleon.github.io/ftr/"><!-- (domain) -->
+<meta property="og:image" content="https://fanaleon.github.io/ftr/ftr-preview.png"><!-- (domain) -->
+<meta property="og:image:width" content="1500">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="FTR — Farting Tesla Roadster, meme token">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="$FTR — Farting Tesla Roadster">
+<meta name="twitter:description" content="The meme token born from the most aerodynamic reply in internet history. Parody. Not financial advice.">
+<meta name="twitter:image" content="https://fanaleon.github.io/ftr/ftr-preview.png"><!-- (domain) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111; --paper:#fff6dc; --night:#0f0c33; --gas:#9be564; --gas2:#c9f5a8;
+  --yellow:#ffd23f; --red:#ff4b4b; --blue:#5ec8ff; --purple:#7a4fd6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(60% 40% at 85% 5%,rgba(122,79,214,.55),transparent 70%),
+    radial-gradient(50% 40% at 5% 70%,rgba(155,229,100,.18),transparent 70%),
+    radial-gradient(rgba(255,255,255,.08) 1.6px,transparent 1.7px) 0 0/14px 14px,
+    var(--night);
+  color:var(--paper);font-family:'Comic Neue','Comic Sans MS',system-ui,sans-serif;font-weight:700;line-height:1.45;overflow-x:hidden}
+h1,h2,h3,.bangers{font-family:'Bangers',Impact,sans-serif;font-weight:400;letter-spacing:.03em}
+
+/* ticker */
+.ticker{background:var(--yellow);color:var(--ink);overflow:hidden;white-space:nowrap;border-bottom:5px solid var(--ink)}
+.ticker div{display:inline-block;padding:7px 0;animation:marq 26s linear infinite;font-family:'Bangers';font-size:20px;letter-spacing:.08em}
+.ticker span{margin:0 26px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* hero */
+.hero{padding:34px 18px 20px;text-align:center;max-width:1100px;margin:0 auto}
+.kicker{display:inline-block;background:var(--paper);color:var(--ink);border:4px solid var(--ink);padding:3px 16px;font-family:'Bangers';font-size:18px;letter-spacing:.1em;
+  box-shadow:5px 5px 0 var(--ink);transform:rotate(-2deg)}
+.title{font-size:clamp(110px,30vw,300px);line-height:.9;margin:14px 0 4px;color:var(--gas);
+  -webkit-text-stroke:10px var(--ink);paint-order:stroke fill;text-shadow:10px 10px 0 var(--ink);
+  transform:rotate(-3deg);animation:wob 3s ease-in-out infinite;display:inline-block}
+@keyframes wob{50%{transform:rotate(-1deg) scale(1.03)}}
+.full{display:inline-block;background:var(--red);color:#fff;font-family:'Bangers';font-size:clamp(20px,4.4vw,38px);letter-spacing:.07em;
+  padding:8px 22px 14px;border:5px solid var(--ink);box-shadow:7px 7px 0 var(--ink);transform:rotate(2deg);margin-bottom:22px;max-width:100%;
+  -webkit-text-stroke:1px var(--ink);paint-order:stroke fill}
+.full #fullName{display:block}
+.ca{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin:10px auto 0;max-width:100%;
+  background:var(--paper);color:var(--ink);border:4px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:6px 10px;cursor:pointer;
+  font-family:ui-monospace,Consolas,'Courier New',monospace;font-weight:700;font-size:clamp(11px,2.5vw,17px);letter-spacing:0;
+  -webkit-text-stroke:0;paint-order:normal;transition:transform .1s,box-shadow .1s}
+.ca:hover{transform:translate(-2px,-2px) rotate(-.6deg);box-shadow:7px 7px 0 var(--ink)}
+.ca:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.ca .calabel,.ca .cacopy{font-family:'Bangers',Impact,sans-serif;font-weight:400;font-size:1.25em;letter-spacing:.08em;padding:0 9px;border:3px solid var(--ink)}
+.ca .calabel{background:var(--ink);color:var(--yellow)}
+.ca .cacopy{background:var(--yellow);color:var(--ink);min-width:5.4em}
+.ca .caval{word-break:break-all;user-select:all}
+.ca.done .cacopy{background:var(--gas)}
+.sub{position:relative;background:var(--paper);color:var(--ink);border:5px solid var(--ink);box-shadow:9px 9px 0 var(--ink);
+  max-width:780px;margin:26px auto 8px;padding:24px 22px 16px;font-size:clamp(16px,2.6vw,23px);transform:rotate(.6deg)}
+.sub::before{content:"NARRATOR";position:absolute;left:14px;top:-17px;background:var(--yellow);border:4px solid var(--ink);font-family:'Bangers';font-size:16px;letter-spacing:.1em;padding:0 10px;transform:rotate(-3deg)}
+.sub b{background:linear-gradient(transparent 55%,rgba(155,229,100,.8) 55%)}
+
+.cta{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin:26px 0 30px}
+.btn{font-family:'Bangers';font-size:26px;letter-spacing:.06em;text-decoration:none;color:var(--ink);background:var(--yellow);
+  border:5px solid var(--ink);padding:8px 28px;border-radius:14px;box-shadow:7px 7px 0 var(--ink);cursor:pointer;transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(-3px,-3px) rotate(-1.5deg);box-shadow:11px 11px 0 var(--ink)}
+.btn:active{transform:translate(5px,5px);box-shadow:2px 2px 0 var(--ink)}
+.btn.green{background:var(--gas)}
+.btn.blue{background:var(--blue)}
+.btn.fart{animation:pulse 1.1s infinite}
+@keyframes pulse{50%{transform:scale(1.07) rotate(1deg)}}
+
+/* scene */
+.scene{width:100%;max-width:1000px;margin:0 auto;border:7px solid var(--ink);border-radius:10px;overflow:hidden;cursor:pointer;
+  box-shadow:14px 14px 0 var(--ink);background:#14103e;transform:rotate(-.5deg)}
+.scene svg{display:block;width:100%;height:auto}
+.hint{margin-top:22px;font-family:'Bangers';letter-spacing:.08em;font-size:18px;color:var(--gas2)}
+.car{animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(6px,-12px) rotate(-1.2deg)}}
+.flame{transform-box:fill-box;transform-origin:50% 0;animation:flame .12s infinite alternate}
+@keyframes flame{to{transform:scaleY(1.5) scaleX(.8)}}
+.puff{transform-box:fill-box;transform-origin:center;opacity:0;animation:puff 2.4s linear infinite}
+@keyframes puff{
+  0%{transform:translate(0,0) scale(.35);opacity:0}
+  10%{opacity:1}
+  85%{opacity:1}
+  100%{transform:translate(var(--dx),var(--dy)) scale(var(--s));opacity:0}}
+.faceCloud{transform-box:fill-box;transform-origin:center;animation:cloudpulse .9s ease-in-out infinite}
+@keyframes cloudpulse{50%{transform:scale(1.12)}}
+.hair{transform-box:fill-box;transform-origin:100% 100%;animation:hair .16s infinite alternate}
+@keyframes hair{to{transform:rotate(-8deg) skewX(8deg)}}
+.critic{animation:wobble .22s infinite alternate}
+@keyframes wobble{to{transform:translate(-3px,1px) rotate(-.8deg)}}
+.tear{animation:tear .7s infinite}
+@keyframes tear{0%{transform:translateY(0);opacity:1}100%{transform:translateY(24px);opacity:0}}
+.stink{animation:stink 1.4s ease-in-out infinite}
+@keyframes stink{0%,100%{transform:translateY(0);opacity:.9}50%{transform:translateY(-8px);opacity:.4}}
+.sfx{transform-box:fill-box;transform-origin:center;animation:sfx .45s infinite alternate}
+@keyframes sfx{to{transform:scale(1.14) rotate(-5deg)}}
+.star{animation:tw 1.6s infinite alternate}
+@keyframes tw{to{opacity:.2}}
+.zz{animation:zz 2s ease-in-out infinite}
+@keyframes zz{0%{transform:translate(0,0);opacity:0}30%{opacity:1}100%{transform:translate(8px,-18px);opacity:0}}
+.dog{transform-box:fill-box;transform-origin:50% 100%;animation:dog 2.2s ease-in-out infinite}
+@keyframes dog{50%{transform:scaleY(1.06)}}
+.brow{transform-box:fill-box;transform-origin:center;animation:brow 2.6s ease-in-out infinite}
+@keyframes brow{0%,70%,100%{transform:translateY(0)}78%{transform:translateY(-4px)}86%{transform:translateY(0)}92%{transform:translateY(-3px)}}
+
+/* legend */
+section{padding:80px 18px 40px;max-width:1100px;margin:0 auto}
+h2{font-size:clamp(38px,8vw,84px);line-height:1;color:var(--yellow);text-align:center;margin-bottom:8px;
+  -webkit-text-stroke:7px var(--ink);paint-order:stroke fill;text-shadow:6px 6px 0 var(--ink);transform:rotate(-1.5deg)}
+.lede{text-align:center;color:var(--gas2);font-size:clamp(15px,2.4vw,20px);margin-bottom:40px}
+.lore{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.panel{position:relative;background:var(--paper);color:var(--ink);border:6px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:44px 22px 22px;overflow:hidden}
+.panel::after{content:"";position:absolute;right:-30px;bottom:-30px;width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(var(--ink) 20%,transparent 21%) 0 0/10px 10px;opacity:.18}
+.panel:nth-child(1){transform:rotate(-1.6deg)}
+.panel:nth-child(2){transform:rotate(1.2deg);background:#e9fbd7}
+.panel:nth-child(3){transform:rotate(-.8deg);background:#ffe9e0}
+.tag{position:absolute;left:-6px;top:-6px;background:var(--yellow);border:5px solid var(--ink);font-family:'Bangers';font-size:20px;letter-spacing:.08em;padding:2px 16px}
+.panel .big{font-size:56px;line-height:1;margin-bottom:6px}
+.panel h3{font-size:32px;color:var(--red);margin-bottom:6px;-webkit-text-stroke:1.5px var(--ink);paint-order:stroke fill}
+.panel p{font-size:18px}
+.quote{font-family:'Bangers';font-size:clamp(28px,6vw,58px);line-height:1.1;text-align:center;margin-top:58px;color:var(--paper);
+  -webkit-text-stroke:6px var(--ink);paint-order:stroke fill;text-shadow:5px 5px 0 var(--ink)}
+.quote em{font-style:normal;color:var(--gas)}
+.quote small{display:block;font-family:'Comic Neue';font-weight:700;font-size:18px;-webkit-text-stroke:0;text-shadow:none;color:var(--gas2);margin-top:12px}
+
+footer{padding:50px 18px 70px;text-align:center;color:#cfc6ff;font-size:14px;max-width:820px;margin:0 auto}
+.socials{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:18px 14px 0}
+.socials a{font-family:'Bangers',Impact,sans-serif;font-size:22px;letter-spacing:.07em;text-decoration:none;color:var(--ink);background:var(--paper);
+  border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:3px 18px;transition:transform .1s,background .1s}
+.socials a:nth-child(1){transform:rotate(-1.5deg)}
+.socials a:nth-child(2){transform:rotate(1deg)}
+.socials a:nth-child(3){transform:rotate(-.8deg)}
+.socials a:hover{transform:translate(-2px,-2px) rotate(-2deg);background:var(--gas)}
+.socials a:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.puffdom{position:fixed;width:20px;height:20px;border-radius:50%;background:var(--gas);border:3px solid var(--ink);pointer-events:none;z-index:60}
+@media (max-width:520px){
+  .socials{gap:8px;padding-top:14px}
+  .socials a{font-size:16px;padding:2px 9px;border-width:3px;box-shadow:3px 3px 0 var(--ink)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="ticker"><div id="tk"></div></div>
+
+<nav class="socials" aria-label="Social links">
+  <a id="lx" href="#" target="_blank" rel="noopener">𝕏 TWITTER</a>
+  <a id="lt" href="#" target="_blank" rel="noopener">✈ TELEGRAM</a>
+  <a id="lp" href="#" target="_blank" rel="noopener">PUMP.FUN</a>
+</nav>
+
+<header class="hero">
+  <span class="kicker">★ MEME TOKEN · 100% GASEOUS ★</span><br>
+  <h1 class="title" id="title">FTR</h1><br>
+  <div class="full">
+    <span id="fullName">FARTING TESLA ROADSTER</span>
+    <button class="ca" id="ca" type="button" title="Click to copy the contract address">
+      <span class="calabel">CA</span><span class="caval" id="caVal"></span><span class="cacopy" id="caCopy">COPY</span>
+    </button>
+  </div>
+
+  <p class="sub">One brave soul on X declared the flying car <b>“an empty flying shell.”</b> The reply?
+    <b>One fart. In his direction.</b> Cinema.</p>
+
+  <div class="cta">
+    <a class="btn green" id="buy" href="#" target="_blank" rel="noopener">BUY <span id="tk1">$FTR</span></a>
+    <button class="btn fart" id="fartBtn">💨 PRESS HERE</button>
+  </div>
+
+  <div class="scene">
+  <svg viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comic scene: a cartoon driver in a flying roadster with a sleeping Shiba blasts a green cloud at a dizzy critic who just posted that the car is an empty flying shell">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f0c33"/><stop offset=".55" stop-color="#2d1b69"/><stop offset="1" stop-color="#6b3fa0"/></linearGradient>
+      <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6f8ff"/><stop offset=".5" stop-color="#b9c4dd"/><stop offset="1" stop-color="#7d8bb0"/></linearGradient>
+      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.7" fill="#fff" opacity=".13"/></pattern>
+      <radialGradient id="glow"><stop offset="0" stop-color="#fff200"/><stop offset="1" stop-color="#ff7a00" stop-opacity="0"/></radialGradient>
+      <filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/></filter>
+    </defs>
+
+    <rect width="900" height="540" fill="url(#sky)"/>
+    <rect width="900" height="540" fill="url(#dots)"/>
+
+    <!-- galaxy + stars -->
+    <g transform="translate(470 78)" opacity=".85">
+      <ellipse rx="72" ry="22" fill="#9d8cff" opacity=".35" transform="rotate(-28)"/>
+      <ellipse rx="52" ry="14" fill="#cdbfff" opacity=".45" transform="rotate(-28)"/>
+      <path d="M0 0 C 20 -22 52 -8 44 18 C 36 42 -6 44 -18 18" fill="none" stroke="#e6deff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+      <circle r="6" fill="#fff6dc"/>
+    </g>
+    <g fill="#fff">
+      <circle class="star" cx="60" cy="40" r="2.4"/><circle class="star" cx="200" cy="110" r="1.8" style="animation-delay:.4s"/>
+      <circle class="star" cx="330" cy="34" r="2.2" style="animation-delay:.8s"/><circle class="star" cx="420" cy="140" r="1.6"/>
+      <circle class="star" cx="640" cy="60" r="2.2" style="animation-delay:.3s"/><circle class="star" cx="880" cy="46" r="2"/>
+      <circle class="star" cx="860" cy="170" r="1.8" style="animation-delay:.6s"/><circle class="star" cx="30" cy="260" r="1.8" style="animation-delay:1s"/>
+      <circle class="star" cx="380" cy="230" r="1.6" style="animation-delay:.2s"/>
+      <path class="star" d="M780 90 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4z" style="animation-delay:.5s"/>
+      <path class="star" d="M110 190 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z"/>
+    </g>
+
+    <!-- skyline -->
+    <g filter="url(#rough)" stroke="#111" stroke-width="4" fill="#241a52">
+      <rect x="-10" y="410" width="80" height="90"/><rect x="78" y="440" width="52" height="60"/>
+      <rect x="350" y="400" width="64" height="100"/><rect x="424" y="360" width="76" height="140"/>
+      <rect x="700" y="410" width="84" height="90"/><rect x="792" y="370" width="110" height="130"/>
+      <g fill="#ffd23f" stroke="none"><rect x="366" y="418" width="10" height="10"/><rect x="386" y="440" width="10" height="10"/><rect x="440" y="382" width="10" height="10"/><rect x="466" y="410" width="10" height="10"/><rect x="720" y="430" width="10" height="10"/><rect x="814" y="392" width="10" height="10"/><rect x="850" y="420" width="10" height="10"/><rect x="20" y="430" width="10" height="10"/></g>
+      <rect x="-10" y="490" width="920" height="60" fill="#1a1240"/>
+    </g>
+
+    <!-- post from X -->
+    <g transform="translate(24 12)">
+      <g transform="rotate(-2 20 14)"><rect width="196" height="30" fill="#ffd23f" stroke="#111" stroke-width="4"/><text x="95" y="22" text-anchor="middle" font-family="Bangers, Impact" font-size="19" fill="#111" textLength="168" lengthAdjust="spacingAndGlyphs">MEANWHILE, ON X...</text></g>
+    </g>
+    <g transform="translate(30 62) rotate(-2 140 60)">
+      <rect x="6" y="6" width="276" height="128" rx="14" fill="#111"/>
+      <rect width="276" height="128" rx="14" fill="#fff6dc" stroke="#111" stroke-width="4"/>
+      <circle cx="34" cy="34" r="20" fill="#ff9f43" stroke="#111" stroke-width="3"/>
+      <path d="M24 28 l8 4 M44 28 l-8 4" stroke="#111" stroke-width="3" stroke-linecap="round"/><path d="M26 44 q8 -8 16 0" stroke="#111" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text x="64" y="30" font-family="Comic Neue, sans-serif" font-weight="700" font-size="16" fill="#111">HaterOfAllThings</text>
+      <text x="64" y="48" font-family="Comic Neue, sans-serif" font-weight="700" font-size="13" fill="#777">@definitely_an_expert</text>
+      <text x="16" y="82" font-family="Comic Neue, sans-serif" font-weight="700" font-size="19" fill="#111">it's literally just an</text>
+      <text x="16" y="106" font-family="Bangers, Impact" font-size="25" fill="#d11" textLength="244" lengthAdjust="spacingAndGlyphs">EMPTY FLYING SHELL 🤡</text>
+      <text x="16" y="124" font-family="Comic Neue, sans-serif" font-weight="700" font-size="12" fill="#777">💬 4.2K    🔁 1.1K    ♥ 69</text>
+    </g>
+    <path d="M70 196 Q 52 262 100 316" fill="none" stroke="#ffd23f" stroke-width="4" stroke-dasharray="3 9" stroke-linecap="round"/>
+
+    <!-- CRITIC -->
+    <g class="critic"><g filter="url(#rough)" stroke="#111" stroke-width="4" stroke-linejoin="round">
+      <!-- legs & shoes -->
+      <rect x="146" y="452" width="26" height="40" rx="8" fill="#2b2b5e"/><rect x="180" y="452" width="26" height="40" rx="8" fill="#2b2b5e"/>
+      <ellipse cx="156" cy="492" rx="22" ry="8" fill="#fff"/><ellipse cx="196" cy="492" rx="22" ry="8" fill="#fff"/>
+      <!-- torso -->
+      <rect x="136" y="396" width="80" height="66" rx="16" fill="#ff6b6b"/>
+      <!-- phone arm -->
+      <path d="M146 414 L108 368" stroke="#111" stroke-width="18" stroke-linecap="round" fill="none"/>
+      <path d="M146 414 L108 368" stroke="#f2c29b" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <rect x="88" y="316" width="32" height="52" rx="6" fill="#222" transform="rotate(-12 104 342)"/>
+      <rect x="93" y="323" width="22" height="36" rx="3" fill="#6ee0ff" stroke="none" transform="rotate(-12 104 342)"/>
+      <!-- other arm (flailing) -->
+      <path d="M206 416 L254 396" stroke="#111" stroke-width="18" stroke-linecap="round" fill="none"/>
+      <path d="M206 416 L254 396" stroke="#f2c29b" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <circle cx="260" cy="393" r="12" fill="#f2c29b"/>
+      <!-- head -->
+      <circle cx="176" cy="360" r="38" fill="#f2c29b"/>
+      <path class="hair" d="M140 346 C130 312 172 304 192 316 C208 310 218 326 212 340 C196 330 166 330 140 346Z" fill="#3a2a1a" stroke-width="3"/>
+      <path d="M140 338 L116 326 L142 352Z M148 326 L128 308 L156 330Z" fill="#3a2a1a" stroke-width="3"/>
+      <!-- dizzy spiral eyes -->
+      <circle cx="162" cy="352" r="11" fill="#fff" stroke-width="3"/><circle cx="162" cy="352" r="6" fill="none" stroke-width="2.5"/><circle cx="162" cy="352" r="2" fill="#111" stroke="none"/>
+      <circle cx="194" cy="352" r="11" fill="#fff" stroke-width="3"/><circle cx="194" cy="352" r="6" fill="none" stroke-width="2.5"/><circle cx="194" cy="352" r="2" fill="#111" stroke="none"/>
+      <path d="M148 334 L172 343 M206 334 L184 343" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <!-- clothespin on nose -->
+      <rect x="171" y="360" width="14" height="18" rx="3" fill="#ffd23f" stroke-width="3"/><path d="M178 362 v14" stroke-width="2.5"/>
+      <!-- gagging mouth -->
+      <ellipse cx="178" cy="388" rx="14" ry="10" fill="#7a1f1f" stroke-width="3"/><ellipse cx="178" cy="394" rx="8" ry="5" fill="#ff8fa3" stroke-width="2"/>
+      <circle cx="150" cy="374" r="9" fill="#9be564" opacity=".7" stroke="none"/>
+      <circle class="tear" cx="156" cy="366" r="4" fill="#6ee0ff" stroke-width="1.5"/><circle class="tear" cx="198" cy="366" r="4" fill="#6ee0ff" stroke-width="1.5" style="animation-delay:.3s"/>
+    </g>
+    <g class="stink" fill="none" stroke="#9be564" stroke-width="5" stroke-linecap="round"><path d="M150 300 q-8 -10 0 -20 q8 -10 0 -20"/><path d="M178 296 q-8 -10 0 -20 q8 -10 0 -20" style="animation-delay:.3s"/></g>
+    <!-- gas on his face -->
+    <g class="faceCloud" id="faceCloud" stroke="#111" stroke-width="4">
+      <circle cx="224" cy="354" r="24" fill="#9be564"/><circle cx="218" cy="332" r="18" fill="#9be564"/><circle cx="228" cy="378" r="20" fill="#9be564"/><circle cx="246" cy="350" r="20" fill="#9be564"/>
+      <circle cx="218" cy="348" r="9" fill="#c9f5a8" stroke="none"/><circle cx="242" cy="344" r="6" fill="#c9f5a8" stroke="none"/>
+    </g></g>
+
+    <!-- gas stream -->
+    <g id="gasStream"></g>
+
+    <!-- impact burst -->
+    <g transform="translate(340 296)"><g class="sfx"><polygon id="burstPoly" fill="#ffd23f" stroke="#111" stroke-width="5" stroke-linejoin="round"/>
+      <text text-anchor="middle" y="11" font-family="Bangers, Impact" font-size="36" fill="#ff4b4b" stroke="#111" stroke-width="1.5" paint-order="stroke" textLength="104" lengthAdjust="spacingAndGlyphs">PFFFT!</text></g></g>
+
+    <!-- bottom caption -->
+    <g transform="translate(618 496) rotate(-1.5)"><rect width="266" height="32" fill="#ffd23f" stroke="#111" stroke-width="4"/><text x="133" y="23" text-anchor="middle" font-family="Bangers, Impact" font-size="19" fill="#111" textLength="230" lengthAdjust="spacingAndGlyphs">THE REPLY ARRIVES...</text></g>
+
+    <!-- CAR -->
+    <g class="car">
+      <!-- speech bubble -->
+      <path d="M580 18 H850 Q866 18 866 34 V76 Q866 92 850 92 H756 L742 114 L732 92 H580 Q564 92 564 76 V34 Q564 18 580 18Z" fill="#fff6dc" stroke="#111" stroke-width="4"/>
+      <text x="715" y="40" text-anchor="middle" font-family="Comic Neue, sans-serif" font-weight="700" font-size="12.5" fill="#666" textLength="220" lengthAdjust="spacingAndGlyphs">Replying to @definitely_an_expert</text>
+      <text x="715" y="72" text-anchor="middle" font-family="Bangers, Impact" font-size="20" fill="#111" textLength="268" lengthAdjust="spacingAndGlyphs">I FART IN YOUR GENERAL DIRECTION 💨</text>
+
+      <g filter="url(#rough)" stroke="#111" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+        <!-- jets -->
+        <polygon class="flame" points="578,306 602,306 590,350" fill="#ffb020" stroke-width="3"/><polygon class="flame" points="788,306 812,306 800,350" fill="#ffb020" stroke-width="3" style="animation-delay:.06s"/>
+        <polygon class="flame" points="584,306 596,306 590,332" fill="#fff200" stroke="none"/><polygon class="flame" points="794,306 806,306 800,332" fill="#fff200" stroke="none" style="animation-delay:.06s"/>
+        <!-- spoiler -->
+        <path d="M492 232 L482 176" fill="none" stroke-width="7"/>
+        <polygon points="440,164 542,150 550,163 452,180" fill="url(#body)"/>
+        <polygon points="428,156 450,154 458,184 436,186" fill="url(#body)"/>
+        <circle cx="440" cy="168" r="2.4" fill="#111" stroke="none"/><circle cx="450" cy="167" r="2.4" fill="#111" stroke="none"/><path d="M439 174 q6 6 13 -1" fill="none" stroke-width="2.5"/>
+        <path d="M424 142 q-8 4 -6 14 M414 136 q-12 6 -8 20" fill="none" stroke-width="3"/>
+        <!-- body -->
+        <path d="M475 238 C478 222 500 214 530 210 L600 204 C640 200 668 188 700 176 L760 168 C800 168 842 184 866 214 C876 228 874 248 862 258 C855 264 845 266 835 266 L505 266 C486 266 473 254 475 238Z" fill="url(#body)"/>
+        <path d="M520 250 L856 250" fill="none" stroke="#5ec8ff" stroke-width="5"/>
+        <path d="M480 228 L522 222" fill="none" stroke="#ff3b3b" stroke-width="6"/>
+        <rect x="860" y="226" width="14" height="10" rx="3" fill="#ffd23f" stroke-width="3"/>
+        <!-- exhausts -->
+        <rect x="458" y="234" width="22" height="10" rx="4" fill="#333" stroke-width="3"/><rect x="458" y="248" width="22" height="10" rx="4" fill="#333" stroke-width="3"/>
+        <!-- wheels -->
+        <circle cx="590" cy="270" r="36" fill="#2a2a3a"/><circle cx="590" cy="270" r="20" fill="#aab4cc" stroke-width="3"/><path d="M590 250 V290 M570 270 H610 M576 256 L604 284 M604 256 L576 284" stroke-width="2.5" fill="none"/><circle cx="590" cy="270" r="5" fill="#111"/>
+        <circle cx="800" cy="270" r="36" fill="#2a2a3a"/><circle cx="800" cy="270" r="20" fill="#aab4cc" stroke-width="3"/><path d="M800 250 V290 M780 270 H820 M786 256 L814 284 M814 256 L786 284" stroke-width="2.5" fill="none"/><circle cx="800" cy="270" r="5" fill="#111"/>
+        <!-- sleeping shiba -->
+        <g class="dog">
+          <ellipse cx="548" cy="206" rx="32" ry="15" fill="#e8933a"/>
+          <path d="M518 204 q-16 -4 -14 -18 q10 2 14 10" fill="#e8933a" stroke-width="4"/>
+          <polygon points="566,192 570,176 580,188" fill="#e8933a" stroke-width="3.5"/><polygon points="584,188 596,176 598,194" fill="#e8933a" stroke-width="3.5"/>
+          <circle cx="580" cy="202" r="16" fill="#e8933a"/><ellipse cx="584" cy="208" rx="10" ry="7" fill="#fff0d8" stroke-width="3"/>
+          <path d="M571 199 q4 4 8 0 M585 199 q4 4 8 0" fill="none" stroke-width="3"/><circle cx="586" cy="206" r="2.5" fill="#111" stroke="none"/>
+        </g>
+        <!-- gullwing door -->
+        <polygon points="598,208 622,118 690,106 698,184" fill="url(#body)"/>
+        <polygon points="610,194 630,130 678,120 686,176" fill="#7fb2e6" stroke-width="3"/>
+        <path d="M640 150 L650 134" fill="none" stroke="#fff" stroke-width="4" opacity=".8"/>
+        <path d="M612 200 L690 190" fill="none" stroke-width="3"/>
+        <!-- driver -->
+        <path d="M690 182 C700 168 740 162 770 166 L776 186 C748 196 712 196 690 182Z" fill="#3a2c6a" stroke-width="4"/>
+        <path d="M712 166 L718 142 L768 142 L774 168Z" fill="#3b82f6" stroke-width="4"/>
+        <path d="M766 156 L806 148" stroke="#111" stroke-width="16" fill="none"/><path d="M766 156 L806 148" stroke="#f2c29b" stroke-width="8" fill="none"/>
+        <circle cx="812" cy="146" r="11" fill="#f2c29b" stroke-width="4"/><path d="M812 136 L814 118" stroke="#111" stroke-width="13" fill="none"/><path d="M812 136 L814 118" stroke="#f2c29b" stroke-width="6" fill="none"/>
+        <!-- driver face: huge lopsided grin, side-eye, raised brows -->
+        <ellipse cx="740" cy="132" rx="25" ry="26" fill="#f2c29b"/>
+        <path d="M716 126 C712 98 758 94 768 120 C756 110 732 112 716 126Z" fill="#e0762a" stroke-width="4"/>
+        <ellipse cx="731" cy="131" rx="7" ry="8" fill="#fff" stroke-width="3"/><ellipse cx="751" cy="130" rx="7" ry="8" fill="#fff" stroke-width="3"/>
+        <circle cx="728.5" cy="132" r="3.4" fill="#111" stroke="none"/><circle cx="748.5" cy="131" r="3.4" fill="#111" stroke="none"/>
+        <circle cx="727.4" cy="130.8" r="1.1" fill="#fff" stroke="none"/><circle cx="747.4" cy="129.8" r="1.1" fill="#fff" stroke="none"/>
+        <path class="brow" d="M722 121 Q731 114 739 120" fill="none" stroke-width="4"/><path class="brow" d="M743 117 Q753 108 763 116" fill="none" stroke-width="4" style="animation-delay:.12s"/>
+        <path d="M741 134 q4 5 -1 8" fill="none" stroke-width="2.5"/>
+        <circle cx="726" cy="140" r="4.5" fill="#ff8fa3" opacity=".55" stroke="none"/><circle cx="757" cy="139" r="4.5" fill="#ff8fa3" opacity=".55" stroke="none"/>
+        <path d="M721 143 Q744 170 767 140 Q744 150 721 143Z" fill="#fff" stroke-width="3"/>
+        <path d="M732 148 v5 M740 150 v6 M748 150 v5 M756 147 v5" fill="none" stroke-width="1.4"/>
+        <path d="M718 141 q-3 3 0 7 M770 138 q3 4 0 8" fill="none" stroke-width="2.4"/>
+      </g>
+      <text class="zz" x="560" y="176" font-family="Bangers, Impact" font-size="22" fill="#fff6dc" stroke="#111" stroke-width="1.5" paint-order="stroke">z</text>
+      <text class="zz" x="574" y="166" font-family="Bangers, Impact" font-size="28" fill="#fff6dc" stroke="#111" stroke-width="1.5" paint-order="stroke" style="animation-delay:.6s">Z</text>
+      <!-- exhaust cloud -->
+      <g stroke="#111" stroke-width="5" filter="url(#rough)">
+        <circle cx="440" cy="240" r="20" fill="#9be564"/><circle cx="420" cy="256" r="24" fill="#9be564"/><circle cx="444" cy="266" r="18" fill="#9be564"/><circle cx="408" cy="234" r="16" fill="#9be564"/>
+        <circle cx="436" cy="234" r="8" fill="#c9f5a8" stroke="none"/><circle cx="414" cy="250" r="9" fill="#c9f5a8" stroke="none"/>
+      </g>
+    </g>
+  </svg>
+  </div>
+  <p class="hint">👆 Tap the scene. Do it. You know you want to.</p>
+</header>
+
+<section id="lore">
+  <h2>The Legend</h2>
+  <p class="lede">(as told by the internet, which is never wrong)</p>
+  <div class="lore">
+    <div class="panel"><span class="tag">PANEL 1</span><div class="big">🚗✨</div><h3>The Reveal</h3><p>The flying roadster rises. Jets roar. Crowds gasp. Somewhere in the back seat, a very smug dog is sleeping through history.</p></div>
+    <div class="panel"><span class="tag">PANEL 2</span><div class="big">⌨️🤡</div><h3>The Take</h3><p>Then, on X, a lone keyboard warrior dropped the hottest take of the decade: “it's literally just an empty flying shell.” Posted with total confidence. Compressed air tanks were mentioned.</p></div>
+    <div class="panel"><span class="tag">PANEL 3</span><div class="big">💨😵</div><h3>The Reply</h3><p>No thread. No essay. Just one line: “I fart in your general direction 💨”. Delivered at cruising altitude, aimed with sniper precision. Critics are, understandably, speechless.</p></div>
+  </div>
+  <p class="quote">Some people reply with arguments.<br><em>Some people reply with gas.</em><small>(Both are valid. Only one is aerodynamic.)</small></p>
+</section>
+
+<footer>
+  <p><b id="ft">$FTR</b> is a parody meme token made by the community for entertainment only. Not affiliated with, endorsed by, or connected to Tesla, Inc. or any other real person, brand or company; any brand name is used only as part of the joke. All characters and handles are fictional cartoons inspired by a public exchange on X. Not financial advice: memecoins are extremely volatile and you can lose everything you put in. Only invest what you can afford to lose.</p>
+</footer>
+
+<script>
+/* ====== EDIT THIS ====== */
+const CONFIG = {
+  name:   "FTR",
+  full:   "FARTING TESLA ROADSTER",
+  ticker: "$FTR",
+  ca:     "7kxTnPr4cnboiiCmE3RKgj65jcDf36QKiYyXE2igpump",
+  x:      "https://x.com/i/communities/2022760494248137144",
+  tg:     "https://t.me/ftrCTO"
+};
+CONFIG.buy = "https://pump.fun/coin/" + CONFIG.ca;   // BUY button + footer PUMP.FUN link
+/* ======================= */
+
+document.title = CONFIG.ticker + " — " + CONFIG.full;
+document.getElementById('title').textContent = CONFIG.name;
+document.getElementById('fullName').textContent = CONFIG.full;
+document.getElementById('caVal').textContent = CONFIG.ca;
+document.getElementById('tk1').textContent = CONFIG.ticker;
+document.getElementById('ft').textContent = CONFIG.ticker;
+document.getElementById('buy').href = CONFIG.buy;
+document.getElementById('lx').href = CONFIG.x;
+document.getElementById('lt').href = CONFIG.tg;
+document.getElementById('lp').href = CONFIG.buy;
+
+// click the red sign to copy the contract address
+function copyText(t){
+  if(navigator.clipboard && window.isSecureContext){ return navigator.clipboard.writeText(t); }
+  return new Promise((ok,fail)=>{
+    const ta=document.createElement('textarea'); ta.value=t; ta.style.cssText='position:fixed;left:-9999px;top:0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy') ? ok() : fail(); }catch(e){ fail(e); }
+    ta.remove();
+  });
+}
+document.getElementById('ca').addEventListener('click',e=>{
+  const btn=e.currentTarget, lab=document.getElementById('caCopy');
+  copyText(CONFIG.ca).then(()=>{
+    lab.textContent='COPIED!'; btn.classList.add('done');
+    const r=btn.getBoundingClientRect(); burst(r.left+r.width/2,r.top+r.height/2,14);
+    setTimeout(()=>{ lab.textContent='COPY'; btn.classList.remove('done'); },1600);
+  }).catch(()=>{
+    const rng=document.createRange(); rng.selectNodeContents(document.getElementById('caVal'));
+    const sel=getSelection(); sel.removeAllRanges(); sel.addRange(rng);
+    lab.textContent='PRESS CTRL+C'; setTimeout(()=>lab.textContent='COPY',2200);
+  });
+});
+
+const words = [CONFIG.ticker,"💨 PFFFT!","BREAKING: SHELL ALLEGEDLY EMPTY","THE REPLY WAS GASEOUS","🚗 FARTING TESLA ROADSTER","REPLYING TO @HATER: 💨","EXPERTS DEMAND A REFUND ON THEIR NOSES"];
+document.getElementById('tk').innerHTML = words.map(w=>`<span>${w}</span>`).join('').repeat(6);
+
+// star-shaped comic burst
+(function(){
+  const n=14, R=70, r=46, pts=[];
+  for(let i=0;i<n*2;i++){
+    const a=Math.PI*i/n, rad=i%2?r:R;
+    pts.push((Math.cos(a)*rad).toFixed(1)+','+(Math.sin(a)*rad*.8).toFixed(1));
+  }
+  document.getElementById('burstPoly').setAttribute('points',pts.join(' '));
+})();
+
+// stream of cartoon gas puffs: exhaust -> critic's face
+(function(){
+  const g=document.getElementById('gasStream'), ns="http://www.w3.org/2000/svg";
+  for(let i=0;i<10;i++){
+    const c=document.createElementNS(ns,'circle');
+    c.setAttribute('cx',420); c.setAttribute('cy',248); c.setAttribute('r',14+Math.random()*9);
+    c.setAttribute('fill','#9be564'); c.setAttribute('stroke','#111'); c.setAttribute('stroke-width','4');
+    c.setAttribute('vector-effect','non-scaling-stroke');
+    c.setAttribute('class','puff');
+    c.style.setProperty('--dx',(-185-Math.random()*30)+'px');
+    c.style.setProperty('--dy',(110+Math.random()*30)+'px');
+    c.style.setProperty('--s',(1.6+Math.random()*1.4).toFixed(2));
+    c.style.animationDelay=(i*0.24)+'s';
+    g.appendChild(c);
+  }
+})();
+
+// synthesized fart (no audio files)
+let ac;
+function fartSound(){
+  ac = ac || new (window.AudioContext||window.webkitAudioContext)();
+  const t=ac.currentTime, dur=.9+Math.random()*.5;
+  const o=ac.createOscillator(), lfo=ac.createOscillator(), lg=ac.createGain(), f=ac.createBiquadFilter(), g=ac.createGain();
+  o.type='sawtooth';
+  o.frequency.setValueAtTime(110+Math.random()*30,t);
+  o.frequency.exponentialRampToValueAtTime(42,t+dur);
+  lfo.type='square'; lfo.frequency.setValueAtTime(24+Math.random()*10,t); lfo.frequency.linearRampToValueAtTime(12,t+dur);
+  lg.gain.value=22; lfo.connect(lg); lg.connect(o.frequency);
+  f.type='lowpass'; f.frequency.value=520; f.Q.value=6;
+  g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(.55,t+.04); g.gain.setValueAtTime(.5,t+dur*.75); g.gain.exponentialRampToValueAtTime(.001,t+dur);
+  o.connect(f); f.connect(g); g.connect(ac.destination);
+  o.start(t); lfo.start(t); o.stop(t+dur); lfo.stop(t+dur);
+}
+const PALETTE=['#ff6bd6','#5ec8ff','#b18cff','#ffa94d','#ff6b6b','#9be564','#2ee6c5'];
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+// 5-point star polygon points centred at (cx,cy)
+function starPoints(cx,cy,R,r){
+  const p=[]; for(let i=0;i<10;i++){ const a=-Math.PI/2+i*Math.PI/5, rad=i%2?r:R; p.push((cx+Math.cos(a)*rad).toFixed(1)+','+(cy+Math.sin(a)*rad).toFixed(1)); }
+  return p.join(' ');
+}
+function burst(x,y,n=34,colorful=false){
+  for(let i=0;i<n;i++){
+    const d=document.createElement('div'); d.className='puffdom';
+    if(colorful){
+      if(Math.random()<.4){
+        d.style.cssText='background:none;border:0;border-radius:0;width:26px;height:26px';
+        d.innerHTML='<svg viewBox="-14 -14 28 28" width="26" height="26"><polygon points="'+starPoints(0,0,12,5)+'" fill="#ffd23f" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/></svg>';
+      } else { d.style.background=pick(PALETTE); }
+    }
+    d.style.left=x+'px'; d.style.top=y+'px';
+    const a=Math.random()*Math.PI*2, r=80+Math.random()*260, s=.7+Math.random()*2.2;
+    document.body.appendChild(d);
+    d.animate([
+      {transform:'translate(-50%,-50%) scale(.3)',opacity:1},
+      {transform:`translate(${Math.cos(a)*r-10}px,${Math.sin(a)*r-10}px) scale(${s})`,opacity:0}
+    ],{duration:1000+Math.random()*900,easing:'cubic-bezier(.2,.7,.3,1)'}).onfinish=()=>d.remove();
+  }
+  const sc=document.querySelector('.scene');
+  sc.animate([{transform:'rotate(-.5deg) translate(0)'},{transform:'rotate(-.5deg) translate(-7px,3px)'},{transform:'rotate(-.5deg) translate(7px,-3px)'},{transform:'rotate(-.5deg) translate(0)'}],{duration:280});
+}
+// PRESS HERE: the car blasts a gas volley that lands on the critic's face
+function shoot(){
+  const ns="http://www.w3.org/2000/svg", g=document.getElementById('gasStream');
+  const car=document.querySelector('.car'), face=document.getElementById('faceCloud');
+  const START={x:420,y:248}, END={x:226,y:352};
+  const flight=950;
+
+  // car recoil
+  car.animate([{transform:'translate(0,0)'},{transform:'translate(16px,-6px) rotate(1.5deg)'},{transform:'translate(0,0)'}],{duration:420,easing:'ease-out'});
+
+  // volley of puffs
+  for(let i=0;i<26;i++){
+    const c=document.createElementNS(ns,'circle');
+    const r0=9+Math.random()*8, r1=r0*(2.2+Math.random()*1.6);
+    c.setAttribute('r',r0); c.setAttribute('fill',pick(PALETTE));
+    c.setAttribute('stroke','#111'); c.setAttribute('stroke-width','4'); c.setAttribute('vector-effect','non-scaling-stroke');
+    c.setAttribute('cx',START.x); c.setAttribute('cy',START.y); c.style.opacity=0;
+    c.style.transformBox='fill-box'; c.style.transformOrigin='center';
+    g.appendChild(c);
+    const dx=END.x-START.x+(Math.random()-.5)*34, dy=END.y-START.y+(Math.random()-.5)*34;
+    const lift=-(30+Math.random()*40);
+    const s1=r1/r0;
+    c.animate([
+      {transform:'translate(0,0) scale(.4)',opacity:0,offset:0},
+      {transform:`translate(${dx*.35}px,${dy*.35+lift}px) scale(${s1*.6})`,opacity:1,offset:.35},
+      {transform:`translate(${dx}px,${dy}px) scale(${s1})`,opacity:1,offset:.85},
+      {transform:`translate(${dx}px,${dy}px) scale(${s1*1.2})`,opacity:0,offset:1}
+    ],{duration:flight,delay:i*55,easing:'cubic-bezier(.3,.6,.4,1)',fill:'both'}).onfinish=()=>c.remove();
+  }
+
+  // yellow stars riding the volley
+  for(let i=0;i<18;i++){
+    const st=document.createElementNS(ns,'polygon');
+    const R=9+Math.random()*9;
+    st.setAttribute('points',starPoints(START.x,START.y,R,R*.42));
+    st.setAttribute('fill','#ffd23f'); st.setAttribute('stroke','#111'); st.setAttribute('stroke-width','3');
+    st.setAttribute('stroke-linejoin','round'); st.setAttribute('vector-effect','non-scaling-stroke');
+    st.style.opacity=0; st.style.transformBox='fill-box'; st.style.transformOrigin='center';
+    g.appendChild(st);
+    const dx=END.x-START.x+(Math.random()-.5)*90, dy=END.y-START.y+(Math.random()-.5)*80;
+    const lift=-(40+Math.random()*60), spin=(Math.random()<.5?-1:1)*(240+Math.random()*300);
+    st.animate([
+      {transform:'translate(0,0) scale(.3) rotate(0deg)',opacity:0,offset:0},
+      {transform:`translate(${dx*.4}px,${dy*.4+lift}px) scale(1.1) rotate(${spin*.45}deg)`,opacity:1,offset:.4},
+      {transform:`translate(${dx}px,${dy}px) scale(1.3) rotate(${spin}deg)`,opacity:1,offset:.88},
+      {transform:`translate(${dx}px,${dy+14}px) scale(.2) rotate(${spin*1.1}deg)`,opacity:0,offset:1}
+    ],{duration:flight+150,delay:i*50,easing:'cubic-bezier(.3,.6,.4,1)',fill:'both'}).onfinish=()=>st.remove();
+  }
+
+  // impact on the face
+  setTimeout(()=>{
+    face.animate([{transform:'scale(1)'},{transform:'scale(1.9)'},{transform:'scale(1.15)'}],{duration:700,easing:'ease-out'});
+    face.querySelectorAll('circle').forEach(c=>{ const f0=c.getAttribute('fill'); c.animate({fill:[f0,pick(PALETTE),pick(PALETTE),f0]},{duration:1100}); });
+    document.querySelector('.critic').animate([{transform:'translate(0,0)'},{transform:'translate(-14px,3px) rotate(-3deg)'},{transform:'translate(8px,-2px) rotate(1deg)'},{transform:'translate(0,0)'}],{duration:500});
+    document.querySelector('.sfx').animate([{transform:'scale(.5)',opacity:0},{transform:'scale(1.5)',opacity:1},{transform:'scale(1)',opacity:1}],{duration:420,easing:'ease-out'});
+    const sc=document.querySelector('.scene');
+    sc.animate([{transform:'rotate(-.5deg) translate(0)'},{transform:'rotate(-.5deg) translate(-8px,3px)'},{transform:'rotate(-.5deg) translate(8px,-3px)'},{transform:'rotate(-.5deg) translate(0)'}],{duration:300});
+    const fr=face.getBoundingClientRect();
+    burst(fr.left+fr.width/2,fr.top+fr.height/2,30,true);
+  },flight+380);
+}
+function press(){
+  const sc=document.querySelector('.scene'), r=sc.getBoundingClientRect();
+  const hidden = r.top<0 || r.bottom>innerHeight;
+  if(hidden) sc.scrollIntoView({behavior:'smooth',block:'center'});
+  setTimeout(()=>{ fartSound(); shoot(); }, hidden?450:0);
+}
+document.getElementById('fartBtn').addEventListener('click',press);
+document.querySelector('.scene').addEventListener('click',press);
+</script>
+</body>
+</html>
