@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>THE SERIES — The Fart Car</title>
+<meta name="description" content="The Fart Car animated series: one-minute episodes and full factory-tour specials. Parody. Not financial advice.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="THE SERIES — The Fart Car">
+<meta property="og:description" content="One-minute episodes and factory-tour specials. The roadster that invented car fart, now in cartoon form.">
+<meta property="og:url" content="https://fartingteslaroadster.fun/series.html">
+<meta property="og:image" content="https://fartingteslaroadster.fun/fartcar-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111; --paper:#fff6dc; --night:#0f0c33; --gas:#9be564; --gas2:#c9f5a8;
+  --yellow:#ffd23f; --red:#ff4b4b; --blue:#5ec8ff; --purple:#7a4fd6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(60% 40% at 85% 5%,rgba(122,79,214,.55),transparent 70%),
+    radial-gradient(50% 40% at 5% 70%,rgba(155,229,100,.18),transparent 70%),
+    radial-gradient(rgba(255,255,255,.08) 1.6px,transparent 1.7px) 0 0/14px 14px,
+    var(--night);
+  color:var(--paper);font-family:'Comic Neue','Comic Sans MS',system-ui,sans-serif;font-weight:700;line-height:1.45;overflow-x:hidden;min-height:100vh}
+h1,h2,h3,.bangers{font-family:'Bangers',Impact,sans-serif;font-weight:400;letter-spacing:.03em}
+
+/* ticker */
+.ticker{background:var(--yellow);color:var(--ink);overflow:hidden;white-space:nowrap;border-bottom:5px solid var(--ink)}
+.ticker div{display:inline-block;padding:7px 0;animation:marq 26s linear infinite;font-family:'Bangers';font-size:20px;letter-spacing:.08em}
+.ticker span{margin:0 26px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* nav (same look as the home) */
+.socials{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:18px 14px 0}
+.socials a{font-family:'Bangers',Impact,sans-serif;font-size:22px;letter-spacing:.07em;text-decoration:none;color:var(--ink);background:var(--paper);
+  border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:3px 18px;transition:transform .1s,background .1s}
+.socials a:nth-child(1){transform:rotate(-1.5deg)}
+.socials a:nth-child(2){transform:rotate(1deg)}
+.socials a.here{background:var(--gas)}
+.socials a:hover{transform:translate(-2px,-2px) rotate(-2deg);background:var(--gas)}
+.socials a:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.langbtn{display:inline-flex;padding:0;overflow:hidden;font-family:'Bangers',Impact,sans-serif;font-size:22px;letter-spacing:.07em;color:var(--ink);background:var(--paper);
+  border:4px solid var(--ink);box-shadow:5px 5px 0 var(--ink);cursor:pointer;transform:rotate(-.8deg);transition:transform .1s}
+.langbtn span{padding:3px 13px;opacity:.55}
+.langbtn span.on{background:var(--gas);opacity:1}
+.langbtn:hover{transform:translate(-2px,-2px) rotate(-1.5deg)}
+
+/* hero */
+.hero{padding:34px 18px 8px;text-align:center;max-width:1100px;margin:0 auto}
+.kicker{display:inline-block;background:var(--paper);color:var(--ink);border:4px solid var(--ink);padding:3px 16px;font-family:'Bangers';font-size:18px;letter-spacing:.1em;
+  box-shadow:5px 5px 0 var(--ink);transform:rotate(-2deg);margin-bottom:14px}
+h1{font-size:clamp(54px,13vw,140px);line-height:.95;color:var(--gas);-webkit-text-stroke:10px var(--ink);paint-order:stroke fill;text-shadow:9px 9px 0 var(--ink);transform:rotate(-2deg);margin:6px 0 20px}
+.lede{display:inline-block;max-width:720px;background:var(--paper);color:var(--ink);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:12px 22px;font-size:19px;transform:rotate(1deg)}
+
+/* sections */
+main{max-width:1180px;margin:0 auto;padding:30px 18px 10px}
+.row{margin:46px 0 54px}
+.row h2{font-size:clamp(38px,7vw,70px);line-height:1;color:var(--yellow);text-align:center;margin-bottom:6px;
+  -webkit-text-stroke:7px var(--ink);paint-order:stroke fill;text-shadow:6px 6px 0 var(--ink);transform:rotate(-1.5deg)}
+.row .rsub{text-align:center;color:var(--gas2);margin-bottom:30px;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:34px 28px}
+
+/* cards */
+.card{position:relative;background:var(--paper);color:var(--ink);border:6px solid var(--ink);box-shadow:9px 9px 0 var(--ink);padding:14px 14px 16px;transition:transform .12s,box-shadow .12s;display:flex;flex-direction:column}
+.card:nth-child(odd){transform:rotate(-1.1deg)}
+.card:nth-child(even){transform:rotate(.9deg)}
+.card:hover{transform:translate(-3px,-3px) rotate(-.4deg);box-shadow:13px 13px 0 var(--ink)}
+.card .num{position:absolute;left:-12px;top:-14px;z-index:3;background:var(--yellow);border:5px solid var(--ink);font-family:'Bangers';font-size:22px;letter-spacing:.08em;padding:0 14px;transform:rotate(-4deg)}
+.card.sp .num{background:var(--blue)}
+.thumb{position:relative;display:block;width:100%;aspect-ratio:16/9;border:4px solid var(--ink);overflow:hidden;background:#14103e;cursor:pointer;padding:0}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+.card:hover .thumb img{transform:scale(1.06)}
+.play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(15,12,51,.18);transition:background .15s}
+.play i{width:70px;height:70px;border-radius:50%;background:var(--red);border:5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);display:flex;align-items:center;justify-content:center}
+.play i::before{content:"";margin-left:6px;border-style:solid;border-width:13px 0 13px 22px;border-color:transparent transparent transparent var(--paper)}
+.card:hover .play{background:rgba(15,12,51,0)}
+.dur{position:absolute;right:6px;bottom:6px;background:var(--ink);color:var(--yellow);font-family:'Bangers';font-size:16px;letter-spacing:.08em;padding:0 8px;border:2px solid var(--paper)}
+.card h3{font-size:30px;line-height:1.05;color:var(--red);-webkit-text-stroke:1.5px var(--ink);paint-order:stroke fill;margin:14px 0 4px}
+.card p{font-size:16px;line-height:1.3;margin-bottom:14px;flex:1}
+.btn{font-family:'Bangers';font-size:24px;letter-spacing:.06em;text-decoration:none;color:var(--ink);background:var(--gas);text-align:center;
+  border:5px solid var(--ink);padding:4px 20px;border-radius:14px;box-shadow:5px 5px 0 var(--ink);cursor:pointer;transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(-2px,-2px) rotate(-1.5deg);box-shadow:8px 8px 0 var(--ink)}
+.btn:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--ink)}
+.btn.blue{background:var(--blue)}
+
+/* coming soon state */
+.card.soon .thumb{cursor:default}
+.card.soon .thumb img{filter:grayscale(1) brightness(.55) contrast(1.1)}
+.card.soon:hover .thumb img{transform:none}
+.card.soon .play{display:none}
+.stamp{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-9deg);white-space:nowrap;font-family:'Bangers';font-size:28px;letter-spacing:.08em;color:var(--red);background:var(--paper);border:5px solid var(--red);padding:2px 14px;box-shadow:4px 4px 0 var(--ink);display:none}
+.card.soon .stamp{display:block}
+.card.soon .btn{background:#cfc6ff;opacity:.75;cursor:not-allowed;box-shadow:3px 3px 0 var(--ink)}
+.card.soon .btn:hover,.card.soon .btn:active{transform:none;box-shadow:3px 3px 0 var(--ink)}
+
+/* player modal */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(8,6,30,.88)}
+.modal.on{display:flex}
+.mbox{position:relative;width:min(1000px,100%);background:var(--paper);color:var(--ink);border:6px solid var(--ink);box-shadow:12px 12px 0 var(--ink);padding:14px 14px 16px;transform:rotate(-.4deg)}
+.mtitle{font-family:'Bangers';font-size:clamp(22px,3.4vw,34px);letter-spacing:.04em;margin:0 56px 10px 4px;color:var(--red);-webkit-text-stroke:1.2px var(--ink);paint-order:stroke fill}
+.mclose{position:absolute;right:-14px;top:-18px;width:48px;height:48px;border-radius:50%;background:var(--red);color:var(--paper);border:5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);font-family:'Bangers';font-size:26px;cursor:pointer;line-height:1}
+.mclose:hover{transform:rotate(8deg) scale(1.06)}
+.vwrap{position:relative;width:100%;aspect-ratio:16/9;background:#000;border:4px solid var(--ink)}
+.vwrap iframe,.vwrap video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mnav{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.mnav .btn{font-size:20px;padding:2px 16px}
+.mnav .btn[disabled]{opacity:.35;cursor:not-allowed}
+
+/* CTA + footer */
+.cta{text-align:center;margin:10px 0 40px}
+.cta .btn{display:inline-block;font-size:28px;padding:8px 30px;background:var(--yellow);box-shadow:7px 7px 0 var(--ink)}
+footer{padding:30px 18px 70px;text-align:center;color:#cfc6ff;font-size:14px;max-width:820px;margin:0 auto}
+footer b{color:var(--gas2)}
+@media (max-width:520px){
+  .socials{gap:8px;padding-top:14px}
+  .socials a{font-size:16px;padding:2px 9px;border-width:3px;box-shadow:3px 3px 0 var(--ink)}
+  .langbtn{font-size:16px;border-width:3px;box-shadow:3px 3px 0 var(--ink)}.langbtn span{padding:2px 9px}
+  h1{-webkit-text-stroke:7px var(--ink);text-shadow:6px 6px 0 var(--ink)}
+  .grid{gap:30px 0}
+  .mclose{right:-6px;top:-16px}
+}
+@media (prefers-reduced-motion:reduce){.ticker div{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="ticker"><div id="tk"></div></div>
+
+<nav class="socials" aria-label="Navigation">
+  <a href="index.html" data-i18n="home">← HOME</a>
+  <a href="series.html" class="here" aria-current="page">SERIES</a>
+  <button class="langbtn" id="lang" type="button" aria-label="Language / Idioma"><span data-l="en">EN</span><span data-l="es">ES</span></button>
+</nav>
+
+<header class="hero">
+  <div class="kicker" data-i18n="kicker">★ NOW SHOWING ★</div>
+  <h1 data-i18n="h1">THE SERIES</h1>
+  <p class="lede" data-i18n="lede">One roadster. One very smug dog. Zero adult supervision. Watch every episode and tour every factory.</p>
+</header>
+
+<main>
+  <section class="row" id="episodes">
+    <h2 data-i18n="h2a">EPISODES</h2>
+    <p class="rsub" data-i18n="subA">One-minute shorts. Maximum gas.</p>
+    <div class="grid" id="gridA"></div>
+  </section>
+
+  <section class="row" id="specials">
+    <h2 data-i18n="h2b">FACTORY TOUR SPECIALS</h2>
+    <p class="rsub" data-i18n="subB">Long-form tours. Real company names. Maximum satire.</p>
+    <div class="grid" id="gridB"></div>
+  </section>
+
+  <div class="cta"><a class="btn" href="index.html" data-i18n="back">💨 BACK TO THE FART CAR</a></div>
+</main>
+
+<footer>
+  <p data-i18n-html="footer"></p>
+</footer>
+
+<!-- player -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+  <div class="mbox">
+    <button class="mclose" id="mclose" type="button" aria-label="Close">✕</button>
+    <div class="mtitle" id="mtitle"></div>
+    <div class="vwrap" id="vwrap"></div>
+    <div class="mnav">
+      <button class="btn" id="mprev" type="button" data-i18n="prev">◀ PREV</button>
+      <button class="btn" id="mnext" type="button" data-i18n="next">NEXT ▶</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   EDIT THIS — one place for every video.
+   yt   : paste the YouTube link OR just the 11-character video ID
+          (watch?v=ID, youtu.be/ID, shorts/ID, embed/ID all work).
+          Leave '' and the card shows "COMING SOON".
+   mp4  : optional. If yt is empty but you host the file in the repo
+          (e.g. 'series/video/ep1.mp4'), the card plays it instead.
+   title/desc : edit freely (EN + ES).
+   ===================================================================== */
+const SERIES = {
+  episodes: [
+    { n:1, thumb:'series/thumbs/ep1.jpg', dur:'1:00', yt:'Hek_APFsrq0', mp4:'',
+      title:{en:'Q4 PRIORITIES', es:'PRIORIDADES DEL Q4'},
+      desc:{en:'Mars. Tunnels. ??? And… one tweet.', es:'Marte. Túneles. ??? Y… un tuit.'} },
+    { n:2, thumb:'series/thumbs/ep2.jpg', dur:'0:59', yt:'0qMovvfwsQQ', mp4:'',
+      title:{en:'ARMORED GLASS', es:'CRISTAL BLINDADO'},
+      desc:{en:'“Impossible to break.” Famous last words.', es:'“Imposible de romper.” Últimas palabras famosas.'} },
+    { n:3, thumb:'series/thumbs/ep3.jpg', dur:'0:59', yt:'aPZTkZkq910', mp4:'',
+      title:{en:'COMING SOON™', es:'PRÓXIMAMENTE™'},
+      desc:{en:'Four hundred balloons. What could go wrong?', es:'Cuatrocientos globos. ¿Qué podría salir mal?'} },
+    { n:4, thumb:'series/thumbs/ep4.jpg', dur:'1:03', yt:'0jJBuaaUCDE', mp4:'',
+      title:{en:'NO WHEEL', es:'SIN VOLANTE'},
+      desc:{en:'No pain. No gas. Emotionally.', es:'Sin dolor. Sin gas. Emocionalmente.'} },
+    { n:5, thumb:'series/thumbs/ep5.jpg', dur:'1:17', yt:'kJZQVnyvyA4', mp4:'',
+      title:{en:'LIFTOFF', es:'DESPEGUE'},
+      desc:{en:'Lady Gravity says it is impossible. The car disagrees.', es:'Lady Gravity dice que es imposible. El auto no opina lo mismo.'} }
+  ],
+  specials: [
+    { n:1, thumb:'series/thumbs/sp1.jpg', dur:'2:24', yt:'rn3MOmpjOTs', mp4:'',
+      title:{en:'THE SPACEX FACTORY', es:'LA FÁBRICA DE SPACEX'},
+      desc:{en:'Why every rocket test needs a payload: a car, a dream, and zero adult supervision.', es:'Por qué todo cohete de prueba necesita carga: un auto, un sueño y cero supervisión adulta.'} },
+    { n:2, thumb:'series/thumbs/sp2.jpg', dur:'2:34', yt:'4zL7lfUXc3o', mp4:'',
+      title:{en:'THE TESLA FACTORY', es:'LA FÁBRICA DE TESLA'},
+      desc:{en:'Robotaxis, Austin… and the roadster unveiled in two thousand seventeen.', es:'Robotaxis, Austin… y el roadster presentado en dos mil diecisiete.'} },
+    { n:3, thumb:'series/thumbs/sp3.jpg', dur:'1:58', yt:'D7pqGw6t_zQ', mp4:'',
+      title:{en:'THE SOLARCITY FACTORY', es:'LA FÁBRICA DE SOLARCITY'},
+      desc:{en:'Nine hundred million dollars. Time is a social construct.', es:'Novecientos millones de dólares. El tiempo es una construcción social.'} },
+    { n:4, thumb:'series/thumbs/sp4.jpg', dur:'2:27', yt:'wIWLJswsimE', mp4:'',
+      title:{en:'THE NEURALINK LAB', es:'EL LABORATORIO DE NEURALINK'},
+      desc:{en:'Your brain is just a computer with feelings and bad Wi-Fi. Ends on a Starship.', es:'Tu cerebro es solo una computadora con sentimientos y mal Wi-Fi. Termina en una Starship.'} }
+  ]
+};
+/* ===================== end of config ===================== */
+
+const I18N={
+ en:{
+  home:'← HOME', kicker:'★ NOW SHOWING ★', h1:'THE SERIES',
+  lede:'One roadster. One very smug dog. Zero adult supervision. Watch every episode and tour every factory.',
+  h2a:'EPISODES', subA:'One-minute shorts. Maximum gas.',
+  h2b:'FACTORY TOUR SPECIALS', subB:'Long-form tours. Real company names. Maximum satire.',
+  back:'💨 BACK TO THE FART CAR', watch:'▶ WATCH', soon:'COMING SOON', ep:'EP.', sp:'SPECIAL', prev:'◀ PREV', next:'NEXT ▶',
+  footer:'<b>The Fart Car</b> is a parody made by the community for entertainment only. Not affiliated with, endorsed by, or connected to Tesla, Inc., SpaceX, SolarCity, Neuralink or any other real person, brand or company. All depictions are satire. Not financial advice.',
+  ticker:['THE FART CAR · THE SERIES','💨 PFFFT!','NEW EPISODES · MAXIMUM GAS','FACTORY TOURS · ZERO ADULT SUPERVISION','🚗 WATCH NOW']
+ },
+ es:{
+  home:'← INICIO', kicker:'★ EN CARTELERA ★', h1:'LA SERIE',
+  lede:'Un roadster. Un perro muy canchero. Cero supervisión adulta. Mirá todos los episodios y recorré todas las fábricas.',
+  h2a:'EPISODIOS', subA:'Cortos de un minuto. Máximo gas.',
+  h2b:'ESPECIALES: TOUR DE FÁBRICAS', subB:'Tours largos. Nombres reales. Máxima sátira.',
+  back:'💨 VOLVER AL FART CAR', watch:'▶ VER', soon:'PRÓXIMAMENTE', ep:'EP.', sp:'ESPECIAL', prev:'◀ ANTERIOR', next:'SIGUIENTE ▶',
+  footer:'<b>The Fart Car</b> es una parodia hecha por la comunidad solo por entretenimiento. No está afiliada, respaldada ni conectada con Tesla, Inc., SpaceX, SolarCity, Neuralink ni con ninguna otra persona, marca o empresa real. Todas las representaciones son sátira. No es asesoramiento financiero.',
+  ticker:['THE FART CAR · LA SERIE','💨 PFFFT!','NUEVOS EPISODIOS · MÁXIMO GAS','TOURS DE FÁBRICAS · CERO SUPERVISIÓN ADULTA','🚗 MIRÁ AHORA']
+ }
+};
+let LANG='en';
+try{ const s=localStorage.getItem('fc_lang'); if(s==='en'||s==='es') LANG=s; }catch(e){}
+const t=k=>(I18N[LANG]&&I18N[LANG][k]!==undefined)?I18N[LANG][k]:I18N.en[k];
+
+/* YouTube link / ID -> 11-char ID ('' if none) */
+function ytId(v){
+  v=(v||'').trim(); if(!v) return '';
+  if(/^[\w-]{11}$/.test(v)) return v;
+  const m=v.match(/(?:v=|youtu\.be\/|shorts\/|embed\/|live\/)([\w-]{11})/);
+  return m?m[1]:'';
+}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* flat playlist (episodes then specials) for PREV/NEXT + deep links */
+const LIST=[];
+SERIES.episodes.forEach(v=>LIST.push({...v,key:'ep'+v.n,kind:'ep'}));
+SERIES.specials.forEach(v=>LIST.push({...v,key:'sp'+v.n,kind:'sp'}));
+LIST.forEach(v=>{ v.id=ytId(v.yt); v.playable=!!(v.id||v.mp4); });
+
+function card(v){
+  const label=(v.kind==='ep'?t('ep')+' '+v.n:t('sp')+' '+v.n);
+  const ttl=v.title[LANG]||v.title.en, desc=(v.desc&&(v.desc[LANG]||v.desc.en))||'';
+  const idx=LIST.indexOf(v);
+  return `<article class="card ${v.kind==='sp'?'sp':''} ${v.playable?'':'soon'}" id="${v.key}">
+    <span class="num">${esc(label)}</span>
+    <button class="thumb" type="button" data-i="${idx}" aria-label="${esc(ttl)}" ${v.playable?'':'disabled'}>
+      <img src="${esc(v.thumb)}" alt="" loading="lazy">
+      <span class="play"><i></i></span>
+      <span class="stamp">${esc(t('soon'))}</span>
+      <span class="dur">${esc(v.dur)}</span>
+    </button>
+    <h3>${esc(ttl)}</h3>
+    <p>${esc(desc)}</p>
+    <button class="btn ${v.kind==='sp'?'blue':''}" type="button" data-i="${idx}" ${v.playable?'':'disabled'}>${esc(v.playable?t('watch'):t('soon'))}</button>
+  </article>`;
+}
+function render(){
+  document.documentElement.lang=LANG;
+  document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>el.innerHTML=t(el.dataset.i18nHtml));
+  document.querySelectorAll('.langbtn span').forEach(s=>s.classList.toggle('on',s.dataset.l===LANG));
+  document.getElementById('tk').innerHTML=t('ticker').map(w=>`<span>${w}</span>`).join('').repeat(6);
+  document.getElementById('gridA').innerHTML=LIST.filter(v=>v.kind==='ep').map(card).join('');
+  document.getElementById('gridB').innerHTML=LIST.filter(v=>v.kind==='sp').map(card).join('');
+  if(cur>=0) document.getElementById('mtitle').textContent=title(LIST[cur]);
+}
+const title=v=>(v.kind==='ep'?t('ep')+' '+v.n:t('sp')+' '+v.n)+' — '+(v.title[LANG]||v.title.en);
+
+/* player */
+const modal=document.getElementById('modal'), vwrap=document.getElementById('vwrap');
+let cur=-1, lastFocus=null;
+function open(i){
+  const v=LIST[i]; if(!v||!v.playable) return;
+  if(cur<0) lastFocus=document.activeElement;
+  cur=i;
+  vwrap.innerHTML = v.id
+    ? `<iframe src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="${esc(title(v))}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`
+    : `<video src="${esc(v.mp4)}" poster="${esc(v.thumb)}" controls autoplay playsinline></video>`;
+  document.getElementById('mtitle').textContent=title(v);
+  const has=d=>{for(let j=i+d;j>=0&&j<LIST.length;j+=d) if(LIST[j].playable) return j; return -1;};
+  const p=has(-1), n=has(1);
+  const bp=document.getElementById('mprev'), bn=document.getElementById('mnext');
+  bp.disabled=p<0; bn.disabled=n<0; bp.dataset.i=p; bn.dataset.i=n;
+  modal.classList.add('on'); document.body.style.overflow='hidden';
+  try{ history.replaceState(null,'','#'+v.key); }catch(e){}
+  document.getElementById('mclose').focus();
+}
+function close(){
+  modal.classList.remove('on'); vwrap.innerHTML=''; document.body.style.overflow=''; cur=-1;
+  try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){}
+  if(lastFocus&&lastFocus.focus) lastFocus.focus();
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-i]'); if(b&&!b.disabled&&b.dataset.i!=='-1'){ open(+b.dataset.i); return; }
+  if(e.target===modal||e.target.closest('#mclose')) close();
+});
+document.addEventListener('keydown',e=>{
+  if(!modal.classList.contains('on')) return;
+  if(e.key==='Escape') close();
+});
+document.getElementById('lang').addEventListener('click',()=>{ LANG=LANG==='en'?'es':'en'; try{localStorage.setItem('fc_lang',LANG);}catch(e){} render(); });
+
+render();
+/* deep link: series.html#ep3 / #sp2 opens that video */
+(function(){ const k=location.hash.slice(1); const i=LIST.findIndex(v=>v.key===k); if(i>=0) { if(LIST[i].playable) open(i); else document.getElementById(k).scrollIntoView(); } })();
+</script>
+</body>
+</html>
