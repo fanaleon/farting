@@ -145,6 +145,7 @@ footer{padding:50px 18px 70px;text-align:center;color:#cfc6ff;font-size:14px;max
 .socials a:nth-child(2){transform:rotate(1deg)}
 .socials a:nth-child(3){transform:rotate(-.8deg)}
 .socials a.series{background:var(--yellow)}
+.socials a.play{background:var(--gas)}
 .socials a:hover{transform:translate(-2px,-2px) rotate(-2deg);background:var(--gas)}
 .socials a:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
 .puffdom{position:fixed;width:20px;height:20px;border-radius:50%;background:var(--gas);border:3px solid var(--ink);pointer-events:none;z-index:60}
@@ -243,6 +244,7 @@ html.lock,html.lock body{overflow:hidden}
   <a id="lx" href="#" target="_blank" rel="noopener">𝕏 TWITTER</a>
   <a id="lp" href="#" target="_blank" rel="noopener">PUMP.FUN</a>
   <a class="series" href="series.html" data-i18n="navSeries">SERIES</a>
+  <a class="play" href="game.html" data-i18n="navPlay">PLAY</a>
   <button class="langbtn" id="lang" type="button" aria-label="Language / Idioma"><span data-l="en">EN</span><span data-l="es">ES</span></button>
 </nav>
 
@@ -523,7 +525,7 @@ const I18N={
  en:{
   kicker:'★ THE ROADSTER THAT INVENTED IT ★', narrator:'NARRATOR',
   sub:'In 2018 a man asked for <b>“invented car fart”</b> on his gravestone. In 2026 that car learned to fly. A critic on X called it <b>“an empty flying shell.”</b> The reply? <b>One fart. In his direction.</b> Prophecy: fulfilled.',
-  navSeries:'SERIES', buy:'BUY {t}', press:'💨 PRESS HERE', hint:'👆 Tap the scene. Do it. You know you want to.',
+  navSeries:'SERIES', navPlay:'PLAY', buy:'BUY {t}', press:'💨 PRESS HERE', hint:'👆 Tap the scene. Do it. You know you want to.',
   copy:'COPY', copied:'COPIED!', ctrlc:'PRESS CTRL+C',
   meanwhile:'MEANWHILE, ON X...', hater1:"it's literally just an", hater2:'EMPTY FLYING SHELL 🤡',
   replying:'Replying to @definitely_an_expert', reply:'I FART IN YOUR GENERAL DIRECTION 💨', arrives:'THE REPLY ARRIVES...',
@@ -553,7 +555,7 @@ const I18N={
  es:{
   kicker:'★ EL ROADSTER QUE LO INVENTÓ ★', narrator:'NARRADOR',
   sub:'En 2018 un hombre pidió <b>“invented car fart”</b> en su lápida. En 2026 ese auto aprendió a volar. Un crítico en X lo llamó <b>“una carcasa vacía voladora”.</b> ¿La respuesta? <b>Un pedo. En su dirección.</b> Profecía: cumplida.',
-  navSeries:'SERIE', buy:'COMPRAR {t}', press:'💨 PRESIONA AQUÍ', hint:'👆 Toca la escena. Hazlo. Sabes que quieres.',
+  navSeries:'SERIE', navPlay:'JUGAR', buy:'COMPRAR {t}', press:'💨 PRESIONA AQUÍ', hint:'👆 Toca la escena. Hazlo. Sabes que quieres.',
   copy:'COPIAR', copied:'¡COPIADO!', ctrlc:'PRESIONA CTRL+C',
   meanwhile:'MIENTRAS, EN X...', hater1:'es literalmente solo una', hater2:'CARCASA VACÍA VOLADORA 🤡',
   replying:'Respondiendo a @definitely_an_expert', reply:'ME TIRO UN PEDO EN TU DIRECCIÓN 💨', arrives:'LLEGA LA RESPUESTA...',

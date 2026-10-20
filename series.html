@@ -42,6 +42,7 @@ h1,h2,h3,.bangers{font-family:'Bangers',Impact,sans-serif;font-weight:400;letter
 .socials a:nth-child(1){transform:rotate(-1.5deg)}
 .socials a:nth-child(2){transform:rotate(1deg)}
 .socials a.here{background:var(--gas)}
+.socials a:nth-child(3){transform:rotate(-.8deg)}
 .socials a:hover{transform:translate(-2px,-2px) rotate(-2deg);background:var(--gas)}
 .socials a:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
 .langbtn{display:inline-flex;padding:0;overflow:hidden;font-family:'Bangers',Impact,sans-serif;font-size:22px;letter-spacing:.07em;color:var(--ink);background:var(--paper);
@@ -134,6 +135,7 @@ footer b{color:var(--gas2)}
 <nav class="socials" aria-label="Navigation">
   <a href="index.html" data-i18n="home">← HOME</a>
   <a href="series.html" class="here" aria-current="page">SERIES</a>
+  <a href="game.html" data-i18n="navPlay">PLAY</a>
   <button class="langbtn" id="lang" type="button" aria-label="Language / Idioma"><span data-l="en">EN</span><span data-l="es">ES</span></button>
 </nav>
 
@@ -223,7 +225,7 @@ const SERIES = {
 
 const I18N={
  en:{
-  home:'← HOME', kicker:'★ NOW SHOWING ★', h1:'THE SERIES',
+  home:'← HOME', navPlay:'PLAY', kicker:'★ NOW SHOWING ★', h1:'THE SERIES',
   lede:'One roadster. One very smug dog. Zero adult supervision. Watch every episode and tour every factory.',
   h2a:'EPISODES', subA:'One-minute shorts. Maximum gas.',
   h2b:'FACTORY TOUR SPECIALS', subB:'Long-form tours. Real company names. Maximum satire.',
@@ -232,7 +234,7 @@ const I18N={
   ticker:['THE FART CAR · THE SERIES','💨 PFFFT!','NEW EPISODES · MAXIMUM GAS','FACTORY TOURS · ZERO ADULT SUPERVISION','🚗 WATCH NOW']
  },
  es:{
-  home:'← INICIO', kicker:'★ EN CARTELERA ★', h1:'LA SERIE',
+  home:'← INICIO', navPlay:'JUGAR', kicker:'★ EN CARTELERA ★', h1:'LA SERIE',
   lede:'Un roadster. Un perro muy canchero. Cero supervisión adulta. Mirá todos los episodios y recorré todas las fábricas.',
   h2a:'EPISODIOS', subA:'Cortos de un minuto. Máximo gas.',
   h2b:'ESPECIALES: TOUR DE FÁBRICAS', subB:'Tours largos. Nombres reales. Máxima sátira.',
